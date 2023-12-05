@@ -1,65 +1,49 @@
 <script>
-document.addEventListener('DOMContentLoaded', function () {
-    const cardsContainer = document.querySelector('.card-content');
-    const cardWidth = window.innerWidth / 2 > 600 ? window.innerWidth / 2 : window.innerWidth - 100;
-    let currentIndex = 0;
-    let intervalId;
+// Assuming you are using Vue.js
+export default {
+  mounted() {
+    this.setupSlider();
+  },
+  methods: {
+    setupSlider() {
+      const cardsContainer = document.querySelector('.card-content');
+      const cardWidth = window.innerWidth / 2 > 600 ? window.innerWidth / 2 : window.innerWidth - 100;
+      let currentIndex = 0;
 
-    function handleScrollNext() {
+      function handleScrollNext() {
         currentIndex = (currentIndex + 1) % cardsContainer.children.length;
         scrollSlider();
-    }
+      }
 
-    function handleScrollPrev() {
+      function handleScrollPrev() {
         currentIndex = (currentIndex - 1 + cardsContainer.children.length) % cardsContainer.children.length;
         scrollSlider();
-    }
+      }
 
-    function scrollSlider() {
+      function scrollSlider() {
         const scrollAmount = currentIndex * cardWidth;
         cardsContainer.scrollLeft = scrollAmount;
 
-        // If reached the last card, loop back to the start
         if (currentIndex === cardsContainer.children.length - 1) {
-            currentIndex = 0;
-            cardsContainer.scrollLeft = 0;
+          currentIndex = 0;
+          cardsContainer.scrollLeft = 0;
         }
+      }
+
+      const next = document.querySelector('#next');
+      const prev = document.querySelector('#prev');
+
+      next.addEventListener('click', handleScrollNext);
+      prev.addEventListener('click', handleScrollPrev);
     }
-
-    function startAutoRun() {
-        intervalId = setInterval(handleScrollNext, 3000); // Adjust the interval as needed (in milliseconds)
-    }
-
-    function stopAutoRun() {
-        clearInterval(intervalId);
-    }
-
-    const next = document.querySelector('#next');
-    const prev = document.querySelector('#prev');
-
-    next.addEventListener('click', function () {
-        handleScrollNext();
-        stopAutoRun();
-    });
-
-    prev.addEventListener('click', function () {
-        handleScrollPrev();
-        stopAutoRun();
-    });
-
-    cardsContainer.addEventListener('mouseover', stopAutoRun);
-    cardsContainer.addEventListener('mouseout', startAutoRun);
-
-    // Start auto-run initially
-    startAutoRun();
-});
-
+  }
+};
 
 </script>
 
 <template>
 
-    <section>
+    <section class="CardSlider">
         <h2 class="Title">Hotel <span>Deals</span></h2>
 
         <div class="line"></div>
@@ -178,7 +162,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     <button id="next" class="btn">
                         <i class="las la-angle-right"></i>
                     </button>
-                    </div>
+                </div>
 
             <!-- </div>
         </div> -->
@@ -187,6 +171,10 @@ document.addEventListener('DOMContentLoaded', function () {
 </template>
 
 <style scoped>
+.CardSlider{
+    padding-top: 4.5rem;
+    overflow: hidden !important;
+}
 .Title{
     color: #0b3ba7 !important;
     font-family: 'Fira Sans', sans-serif;
@@ -270,8 +258,6 @@ p {
     height: 200px;
 
 }
-
-
 .card-content {
   display:flex;
   align-items:center;
@@ -320,13 +306,13 @@ p {
 }
 
 .slider {
-  display:flex;
-  align-items:center;
-  justify-content:center;
-
-  width:100%;
-  height:570px;
-  overflow:hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    padding-bottom: 15px;
+    overflow: hidden;
 }
 
 .slider:after {
@@ -352,11 +338,43 @@ p {
 }
 .line{
     position: absolute;
-    top: 185px;
     left: 575px;
     width: 90px;
     height: 5px;
     background-color: #fd9604;
     border-radius: 10px;
+}
+@media screen and (max-width: 768px) {
+    .card-content {
+        width: 100%;
+        padding: 0;
+    }
+    .slider{
+        display: block;
+        margin-top: -50px;
+    }
+    .card{
+        margin-left:10px;
+    }
+    #prev {
+        width: 30px !important;
+        height: 30px!important;
+        margin-top: 80px;
+        margin-left: 62%;
+        padding: 0;
+    }
+    #next {
+        width: 30px !important;
+        height: 30px!important;
+        margin-top: -963px;
+        margin-left: 80%;
+        padding: 0;
+    }
+    .slider:before{
+        display: none;
+    }
+    .slider:after{
+        display: none;
+    }
 }
 </style>

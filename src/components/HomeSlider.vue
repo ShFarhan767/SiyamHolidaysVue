@@ -4,7 +4,7 @@
     
     <!--    Main Content-->
 
-    <div class="preloader" id="preloader">
+    <!-- <div class="preloader" id="preloader">
         <div class="loader">
             <div class="line-scale">
                 <div></div>
@@ -14,7 +14,7 @@
                 <div></div>
             </div>
         </div>
-    </div>
+    </div> -->
     <section class="py-0">
         <div class="swiper theme-slider min-vh-100" data-swiper='{"loop":true,"allowTouchMove":false,"autoplay":{"delay":5000},"effect":"fade","speed":800}'>
             <div class="swiper-wrapper">

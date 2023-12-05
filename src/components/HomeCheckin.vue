@@ -1,37 +1,42 @@
 <script>
-document.addEventListener('DOMContentLoaded', function() {
-    // Your JavaScript code here
-    const tabs = document.querySelectorAll('.tab_btn');
-    const all_content = document.querySelectorAll('.content');
-
-    tabs.forEach((tab, index) => {
-        tab.addEventListener('click', (e) => {
-            // Remove 'active' class from all tabs
-            tabs.forEach(t => {
-                t.classList.remove('active');
-            });
-
-            // Remove 'active' class from all content elements
-            all_content.forEach(content => {
-                content.classList.remove('active');
-            });
-
-            // Add 'active' class to the clicked tab
+export default {
+    data() {
+      return {
+        tabs: null,
+        allContent: null,
+        line: null
+      };
+    },
+    mounted() {
+      this.$nextTick(() => {
+        this.initTabs();
+      });
+    },
+    methods: {
+      initTabs() {
+        this.tabs = document.querySelectorAll('.tab_btn');
+        this.allContent = document.querySelectorAll('.content');
+        this.line = document.querySelector('.line');
+  
+        this.tabs.forEach((tab, index) => {
+          tab.addEventListener('click', (e) => {
+            this.tabs.forEach(t => t.classList.remove('active'));
+            this.allContent.forEach(content => content.classList.remove('active'));
+  
             tab.classList.add('active');
-
-            // Add 'active' class to the corresponding content based on the clicked tab index
-            const tabIndex = Array.from(tabs).indexOf(tab);
-            all_content[tabIndex].classList.add('active');
-
-            // Update the line position if needed
-            var line = document.querySelector('.line');
-            line.style.width = e.target.offsetWidth + "px";
-            line.style.left = e.target.offsetLeft + "px";
+  
+            const tabIndex = Array.from(this.tabs).indexOf(tab);
+            this.allContent[tabIndex].classList.add('active');
+  
+            // Update line position to connect with the clicked button
+            this.line.style.width = e.target.offsetWidth + "px";
+            this.line.style.left = e.target.offsetLeft + "px";
+            this.line.style.top = e.target.offsetTop + e.target.offsetHeight + "px";
+          });
         });
-    });
-
-
-});
+      }
+    }
+};
 
 </script>
 
@@ -43,12 +48,25 @@ document.addEventListener('DOMContentLoaded', function() {
             <div class="overlay"></div>
 
             <div class="container">
+
                 <div class="tab_box">
+                    <!-- <p class="bg-line"></p> -->
+                    
+                </div>
+
+                <div class="button">
                     <button class="tab_btn"><i class="fas fa-bed"></i></button>
                     <button class="tab_btn"><i class="fas fa-plane"></i></button>
                     <button class="tab_btn"><i class="fas fa-tree"></i></button>
                     <button class="tab_btn"><i class="fas fa-campground"></i></button>
                     <div class="line"></div>
+                </div>
+
+                <div class="ButtonName">
+                    <p>Hotel</p>
+                    <p>Flight</p>
+                    <p>Guide</p>
+                    <p>Activites</p>
                 </div>
 
                 <div class="content_box">
@@ -85,7 +103,7 @@ document.addEventListener('DOMContentLoaded', function() {
                                     </select>
                                 </div>
                                 <div class="col-md-2 check">
-                                    <a href="#" class="CheckBox-Btn">Search Destination</a>
+                                    <a href="#" class="CheckBox-Btn">Search</a>
                                 </div>
                             </div>
                        </div>
@@ -221,6 +239,7 @@ document.addEventListener('DOMContentLoaded', function() {
 .checkBox{
     margin: 0;
     padding: 0;
+    overflow: hidden !important;
 }
 .fh5co-cta{
 	background-image: url(https://images.pexels.com/photos/6130045/pexels-photo-6130045.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
@@ -243,19 +262,48 @@ document.addEventListener('DOMContentLoaded', function() {
     z-index: 999;
 }
 .tab_box{
-    width: 100%;
+    width: 117%;
+    overflow: hidden !important;
     margin-top: 100px;
+    margin-left: -94px !important;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    border-bottom: 2px solid rgba(229, 229, 229);
+    border-bottom: 2px solid rgb(252, 252, 252) !important;
+    z-index: -20;
     position: relative;
 }
-.tab_box .tab_btn{
-    font-size: 18px;
+.button{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: -45px;
+}
+.ButtonName{
+    width: 100%;
+    margin-left:5px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.ButtonName p{
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 20px;
+    color: #fff;
+    letter-spacing: 1px;
+}
+.tab_box{
     font-weight: 600;
     color: #919191;
     background: none;
+    border: none;
+    padding: 18px;
+    cursor: pointer;    
+}
+.tab_btn{
+    color: #919191;
+    background: transparent;
     border: none;
     padding: 18px;
     cursor: pointer;    
@@ -302,13 +350,23 @@ document.addEventListener('DOMContentLoaded', function() {
 }
 .line{
     position: absolute;
-    top: 87px;
-    left: 8.5%;
-    width: 90px;
+    width: 88px !important;
+    left: 95px ;
+    top: 165px !important;
+    z-index: -1;
     height: 5px;
     background-color: #fd9604;
     border-radius: 10px;
+    transition: width 0.3s ease, left 0.3s ease, top 0.3s ease;
 }
+
+/* .bg-line{
+    width: 100%;
+    height: 5px;
+    background: red;
+    z-index: -999;
+} */
+
 
 .col-md-2{
     border-left: 1px solid #e9e9e9;
@@ -325,16 +383,17 @@ document.addEventListener('DOMContentLoaded', function() {
     background: #fff;
 }
 .Place input{
-    width: 110px;
+    width: 85%;
     border: none;
     text-align: start;
     margin-top: 22px;
 }
 input{
-    width: 135px;
+    width:100%;
     border: none;
     text-align: start;
     margin-top: 22px;
+    font-family: 'Nunito Sans', sans-serif;
 }
 input:focus {
     outline: none;
@@ -377,12 +436,14 @@ select:focus {
 }
 .check{
     background: #fd9604;
-    padding: 21px;
+    padding: 20px;
     text-align: center;
 }
 .CheckBox-Btn{
-    font-size: 12px;
+    font-size: 16px;
     text-decoration: none;
-    color: #000;
+    color: #fff;
+    font-family: 'Nunito Sans', sans-serif;
 }
+
 </style>
