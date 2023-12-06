@@ -196,6 +196,7 @@ export default {
   min-height:356px;
   cursor:pointer;
   transition: all .25s ease;
+  border: none;
   box-shadow: 0px 0px 0px 0px rgba(0,0,0, .08);
 }
 
@@ -286,6 +287,10 @@ p {
   min-width:50px;
   margin:auto 10px;
   height:60px;
+  padding: 6px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.5px;
   border-radius:20px;
   background:#fd9604;
   color: #fff;
@@ -315,27 +320,6 @@ p {
     overflow: hidden;
 }
 
-.slider:after {
-  content:'';
-  left:98px;
-  height:90vh;
-  position:absolute;
-  width:150px;
-  z-index:100;
-  background: linear-gradient(90deg, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 100%);
-  pointer-events:none;
-}
-
-.slider:before {
-  content:'';
-  right:0px;
-  height:90vh;
-  position:absolute;
-  width:150px;
-  z-index:100;
-  background: linear-gradient(90deg, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 100%);
-  pointer-events:none;
-}
 .line{
     position: absolute;
     left: 575px;

@@ -30,7 +30,7 @@ export default {
   
             // Update line position to connect with the clicked button
             this.line.style.width = e.target.offsetWidth + "px";
-            this.line.style.left = e.target.offsetLeft + "px";
+            this.line.style.left = e.target.offsetLeft + 10 + "px";
             this.line.style.top = e.target.offsetTop + e.target.offsetHeight + "px";
           });
         });
@@ -55,174 +55,92 @@ export default {
                 </div>
 
                 <div class="button">
-                    <button class="tab_btn"><i class="fas fa-bed"></i></button>
-                    <button class="tab_btn"><i class="fas fa-plane"></i></button>
-                    <button class="tab_btn"><i class="fas fa-tree"></i></button>
-                    <button class="tab_btn"><i class="fas fa-campground"></i></button>
+                    <button class="tab_btn"><i class="fas fa-bed"></i><span>Hotel</span></button>
+                    <button class="tab_btn"><i class="fas fa-plane"></i><span>Flight</span></button>
+                    <button class="tab_btn"><i class="fas fa-tree"></i><span>Guide</span></button>
+                    <button class="tab_btn"><i class="fas fa-campground"></i><span>Activites</span></button>
                     <div class="line"></div>
                 </div>
 
-                <div class="ButtonName">
-                    <p>Hotel</p>
-                    <p>Flight</p>
-                    <p>Guide</p>
-                    <p>Activites</p>
-                </div>
-
-                <div class="content_box">
-                    <div class="content active">
-                       <div class="container">
-                            <div class="row details">
-                                <div class="col-md-2 Place">
-                                    <input type="text" placeholder="From">
-                                    <i class="fas fa-map-marker-alt" style="color: #fd9604;"></i>
-                                </div>
-                                <div class="col-md-2 Place">
-                                    <input type="text" placeholder="To">
-                                    <i class="fas fa-map-marker-alt" style="color: #fd9604;"></i>
-                                </div>
-                                <div class="col-md-2 date-input">
-                                    <input type="date">
-                                </div>
-                                <div class="col-md-2 date-input" >
-                                    <input type="date">
-                                </div>
-                                <div class="col-md-2">
-                                    <select id="numberSelect" name="number">
-                                        <option value="" disabled selected>Guest</option>
-                                        <option value="1">1</option>
-                                        <option value="2">2</option>
-                                        <option value="3">3</option>
-                                        <option value="4">4</option>
-                                        <option value="5">5</option>
-                                        <option value="6">6</option>
-                                        <option value="7">7</option>
-                                        <option value="8">8</option>
-                                        <option value="9">9</option>
-                                        <option value="10">10</option>
-                                    </select>
-                                </div>
-                                <div class="col-md-2 check">
-                                    <a href="#" class="CheckBox-Btn">Search</a>
-                                </div>
+                <div class="content_box tm-section tm-bg-img" id="tm-section-1">
+                    <div class="content active tm-bg-white ie-container-width-fix-2">
+                       <div class="container ie-h-align-center-fix">
+                            <div class="row">
+                                <div class="col-xs-12 ml-auto mr-auto ie-container-width-fix">
+                                    <form action="index.html" method="get" class="tm-search-form tm-section-pad-2">
+                                        <div class="form-row tm-search-form-row">
+                                            <div class="form-group tm-form-element tm-form-element-100">
+                                                <i class="fas fa-map-marker-alt fa-2x tm-form-element-icon"></i>
+                                                <input name="city" type="text" class="form-control" id="inputCity" placeholder="Type your destination...">
+                                            </div>
+                                            <div class="form-group tm-form-element tm-form-element-50">
+                                                <i class="fas fa-calendar-alt fa-2x tm-form-element-icon"></i>
+                                                <input name="check-in" type="date" class="form-control" id="inputCheckIn" placeholder="Check In">
+                                            </div>
+                                            <div class="form-group tm-form-element tm-form-element-50">
+                                                <i class="fas fa-calendar-alt fa-2x tm-form-element-icon"></i>
+                                                <input name="check-out" type="date" class="form-control" id="inputCheckOut" placeholder="Check Out">
+                                            </div>
+                                        </div>
+                                        <div class="form-row tm-search-form-row">
+                                            <div class="form-group tm-form-element tm-form-element-2">                                            
+                                                <select name="adult" class="form-control tm-select" id="adult">
+                                                    <option value="">Adult</option>
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                    <option value="4">4</option>
+                                                    <option value="5">5</option>
+                                                    <option value="6">6</option>
+                                                    <option value="7">7</option>
+                                                    <option value="8">8</option>
+                                                    <option value="9">9</option>
+                                                    <option value="10">10</option>
+                                                </select>
+                                                <i class="fa fa-2x fa-user tm-form-element-icon"></i>
+                                            </div>
+                                            <div class="form-group tm-form-element tm-form-element-2">                                            
+                                                <select name="children" class="form-control tm-select" id="children">
+                                                    <option value="">Children</option>
+                                                    <option value="0">0</option>
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                    <option value="4">4</option>
+                                                    <option value="5">5</option>
+                                                    <option value="6">6</option>
+                                                    <option value="7">7</option>
+                                                    <option value="8">8</option>
+                                                    <option value="9">9</option>
+                                                    <option value="10">10</option>
+                                                </select>
+                                                <i class="fa fa-2x fa-user tm-form-element-icon"></i>
+                                            </div>
+                                            <div class="form-group tm-form-element tm-form-element-2">
+                                                <select name="room" class="form-control tm-select" id="room">
+                                                    <option value="">Room</option>
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                    <option value="4">4</option>
+                                                    <option value="5">5</option>
+                                                    <option value="6">6</option>
+                                                    <option value="7">7</option>
+                                                    <option value="8">8</option>
+                                                    <option value="9">9</option>
+                                                    <option value="10">10</option>
+                                                </select>
+                                                <i class="fa fa-2x fa-bed tm-form-element-icon"></i>
+                                            </div>
+                                            <div class="form-group tm-form-element tm-form-element-2">
+                                                <button type="submit" class="btn btn-primary tm-btn-search">Check Availability</button>
+                                            </div>
+                                        </div>
+                                        
+                                    </form>
+                                </div>                        
                             </div>
-                       </div>
-                    </div>
-
-                    <div class="content">
-                        <div class="container">
-                            <div class="row details">
-                                <div class="col-md-2 Place">
-                                    <input type="text" placeholder="From">
-                                    <i class="fas fa-map-marker-alt" style="color: #fd9604;"></i>
-                                </div>
-                                <div class="col-md-2 Place">
-                                    <input type="text" placeholder="To">
-                                    <i class="fas fa-map-marker-alt" style="color: #fd9604;"></i>
-                                </div>
-                                <div class="col-md-2 date-input">
-                                    <input type="date" id="datePicker" name="selectedDate">
-                                </div>
-                                <div class="col-md-2 date-input" >
-                                    <input type="date" id="datePicker" name="selectedDate">
-                                </div>
-                                <div class="col-md-2">
-                                    <select id="numberSelect" name="number">
-                                        <option value="" disabled selected>Guest</option>
-                                        <option value="1">1</option>
-                                        <option value="2">2</option>
-                                        <option value="3">3</option>
-                                        <option value="4">4</option>
-                                        <option value="5">5</option>
-                                        <option value="6">6</option>
-                                        <option value="7">7</option>
-                                        <option value="8">8</option>
-                                        <option value="9">9</option>
-                                        <option value="10">10</option>
-                                    </select>
-                                </div>
-                                <div class="col-md-2 check">
-                                    <a href="#" class="CheckBox-Btn">Search Flight</a>
-                                </div>
-                            </div>
-                       </div>
-                    </div>
-
-                    <div class="content">
-                        <div class="container">
-                            <div class="row details">
-                                <div class="col-md-2 Place">
-                                    <input type="text" placeholder="From">
-                                    <i class="fas fa-map-marker-alt" style="color: #fd9604;"></i>
-                                </div>
-                                <div class="col-md-2 Place">
-                                    <input type="text" placeholder="To">
-                                    <i class="fas fa-map-marker-alt" style="color: #fd9604;"></i>
-                                </div>
-                                <div class="col-md-2 date-input">
-                                    <input type="date" id="datePicker" name="selectedDate">
-                                </div>
-                                <div class="col-md-2 date-input" >
-                                    <input type="date" id="datePicker" name="selectedDate">
-                                </div>
-                                <div class="col-md-2">
-                                    <select id="numberSelect" name="number">
-                                        <option value="" disabled selected>Guest</option>
-                                        <option value="1">1</option>
-                                        <option value="2">2</option>
-                                        <option value="3">3</option>
-                                        <option value="4">4</option>
-                                        <option value="5">5</option>
-                                        <option value="6">6</option>
-                                        <option value="7">7</option>
-                                        <option value="8">8</option>
-                                        <option value="9">9</option>
-                                        <option value="10">10</option>
-                                    </select>
-                                </div>
-                                <div class="col-md-2 check">
-                                    <a href="#" class="CheckBox-Btn">Search Hotels</a>
-                                </div>
-                            </div>
-                       </div>
-                    </div>
-
-                    <div class="content">
-                        <div class="container">
-                            <div class="row details">
-                                <div class="col-md-2 Place">
-                                    <input type="text" placeholder="From">
-                                    <i class="fas fa-map-marker-alt" style="color: #fd9604;"></i>
-                                </div>
-                                <div class="col-md-2 Place">
-                                    <input type="text" placeholder="To">
-                                    <i class="fas fa-map-marker-alt" style="color: #fd9604;"></i>
-                                </div>
-                                <div class="col-md-2 date-input">
-                                    <input type="date" id="datePicker" name="selectedDate">
-                                </div>
-                                <div class="col-md-2 date-input" >
-                                    <input type="date" id="datePicker" name="selectedDate">
-                                </div>
-                                <div class="col-md-2">
-                                    <select id="numberSelect" name="number">
-                                        <option value="" disabled selected>Guest</option>
-                                        <option value="1">1</option>
-                                        <option value="2">2</option>
-                                        <option value="3">3</option>
-                                        <option value="4">4</option>
-                                        <option value="5">5</option>
-                                        <option value="6">6</option>
-                                        <option value="7">7</option>
-                                        <option value="8">8</option>
-                                        <option value="9">9</option>
-                                        <option value="10">10</option>
-                                    </select>
-                                </div>
-                                <div class="col-md-2 check">
-                                    <a href="#" class="CheckBox-Btn">Search Trip</a>
-                                </div>
-                            </div>
+                            
                        </div>
                     </div>
 
@@ -236,14 +154,17 @@ export default {
 
 
 <style scoped>
+@import url('../../assets/css/tooplate-style.css');
 .checkBox{
     margin: 0;
     padding: 0;
     overflow: hidden !important;
 }
 .fh5co-cta{
-	background-image: url(https://images.pexels.com/photos/6130045/pexels-photo-6130045.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
-	height: 420px;
+    background-image: url(https://images.pexels.com/photos/6130045/pexels-photo-6130045.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    height: 620px;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .fh5co-cta .overlay {
     background: rgba(0, 0, 0, 0.7);
@@ -253,7 +174,7 @@ export default {
     top: 0;
     position: absolute;
     z-index: 1;
-    height: 420px;
+    height: 620px;
 }
 .container{
     width: 100%;
@@ -280,19 +201,6 @@ export default {
     align-items: center;
     margin-top: -45px;
 }
-.ButtonName{
-    width: 100%;
-    margin-left:5px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-.ButtonName p{
-    font-family: 'Nunito Sans', sans-serif;
-    font-size: 20px;
-    color: #fff;
-    letter-spacing: 1px;
-}
 .tab_box{
     font-weight: 600;
     color: #919191;
@@ -301,57 +209,44 @@ export default {
     padding: 18px;
     cursor: pointer;    
 }
+.tab_btn span{
+    margin-left: 10px;  
+}
 .tab_btn{
-    color: #919191;
-    background: transparent;
-    border: none;
-    padding: 18px;
-    cursor: pointer;    
+    font-size: 18px;
+    font-family: 'Open Sans', sans-serif;
+    background: none;
+    border: 1px solid #fd9604;
+    color: #fd9604;
+    width: 120px;
+    height: 40px;
+    margin-top: -15px !important;
+    padding: 5px;
+    border-radius: 30px;
+    cursor: pointer; 
+    transition: 0.5s all;
 }
-.fa-bed{
-    font-size: 32px;
+.tab_btn:hover{
     background: #fd9604;
     color: #fff;
-    width: 50px;
-    padding: 8px;
-    height: 50px;
-    border-radius: 50%;
-}
-.fa-plane{
-    font-size: 32px;
-    background: #fd9604;
-    color: #fff;
-    width: 50px;
-    padding: 8px;
-    height: 50px;
-    border-radius: 50%;
-    transform: rotateZ(-30deg);
-}
-.fa-tree{
-    font-size: 32px;
-    background: #fd9604;
-    color: #fff;
-    width: 50px;
-    padding: 8px;
-    height: 50px;
-    border-radius: 50%;
-}
-.fa-campground{
-    font-size: 32px;
-    background: #fd9604;
-    color: #fff;
-    width: 50px;
-    padding: 8px;
-    height: 50px;
-    border-radius: 50%;
 }
 .tab_box .tab_btn.active{
+    color: #fd9604;
+}
+.btn-primary{
+    background: #fd9604;
+    color: #fff;
+    border: 1px solid #fd9604;
+}
+.btn-primary:hover{
+    background: none;
+    border: 1px solid #fd9604;
     color: #fd9604;
 }
 .line{
     position: absolute;
     width: 88px !important;
-    left: 95px ;
+    left: 122px ;
     top: 165px !important;
     z-index: -1;
     height: 5px;
@@ -359,91 +254,35 @@ export default {
     border-radius: 10px;
     transition: width 0.3s ease, left 0.3s ease, top 0.3s ease;
 }
-
-/* .bg-line{
-    width: 100%;
-    height: 5px;
-    background: red;
-    z-index: -999;
-} */
-
-
-.col-md-2{
-    border-left: 1px solid #e9e9e9;
+#tm-section-1[data-v-b37b027a] {
+    background: transparent !important;
+    height: auto;
+    margin-top: -40px;
 }
-.content_box .content{
-    display: none;
-}
-.content_box .content.active{
-    display: block;
-}
-.details{
-    width: 100%;
-    height: 65px;
-    background: #fff;
-}
-.Place input{
-    width: 85%;
-    border: none;
-    text-align: start;
-    margin-top: 22px;
-}
-input{
-    width:100%;
-    border: none;
-    text-align: start;
-    margin-top: 22px;
-    font-family: 'Nunito Sans', sans-serif;
-}
-input:focus {
-    outline: none;
-    border: none; 
-}
-/* .date-input::before{
-    content: '\1F4C5';
-    font-family: 'Segoe UI Symbol', 'Font Awesome 5 Free';
-    position: absolute;
-    top: 50%;
-    right: 308px;
-    transform: translateY(-50%);
+.tm-form-element-icon {
     color: #fd9604;
-    font-size: 18px;
-    background: #fff;
-    padding: 9px;
+    position: absolute !important;
+    top: 10px !important;
+    left: 15px !important;
 }
-#datePicker::before{
-    content: '\1F4C5';
-    font-family: 'Segoe UI Symbol', 'Font Awesome 5 Free';
-    position: absolute;
-    top: 50%;
-    right: 8px;
-    transform: translateY(-50%);
-    color: #fd9604;
-    font-size: 18px;
-    background: #fff;
-    padding: 9px;
-} */
-select{
-    width: 110px;
-    border: none;
-    text-align: start;
-    margin-top: 22px;
-    color: #919191;
+.fa-2x {
+    font-size: 1.5em;
 }
-select:focus {
-    outline: none;
-    border: none; 
+.form-control:focus {
+    border-color: #fd9604;
+    box-shadow: 0 0 0 0.2rem #ffd59a;
 }
-.check{
-    background: #fd9604;
-    padding: 20px;
-    text-align: center;
+@media screen and (max-width: 768px) {
+    .fa-bed , .fa-plane ,
+    .fa-tree , .fa-campground{
+        width: 35px;
+        height: 35px;
+        margin-top: 6px;
+    }
+    .line{
+        width: 55px !important;
+        height: 3px;
+        left: 25px !important;
+    }
 }
-.CheckBox-Btn{
-    font-size: 16px;
-    text-decoration: none;
-    color: #fff;
-    font-family: 'Nunito Sans', sans-serif;
-}
-
 </style>

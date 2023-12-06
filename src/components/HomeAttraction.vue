@@ -35,19 +35,20 @@ export default {
 
 <template>
     
-    <section class="Package">
+    <section class="Attraction">
 
         <div class="container">
-            <h2 class="Title">Package Tour</h2>
-            <p class="description">Get ready for starting tour</p>
+            <h2 class="Title">Attractions & Activities</h2>
+            <p class="description">Make easy your journey with us</p>
+
 
             <button id="prev" class="btn" @click="handleScrollPrev">
-                    <i class="las la-angle-left"></i>
-                </button>
+                <i class="las la-angle-left"></i>
+            </button>
 
-                <button  id="next" class="btn" @click="handleScrollNext">
-                    <i class="las la-angle-right"></i>
-                </button>
+            <button  id="next" class="btn" @click="handleScrollNext">
+                <i class="las la-angle-right"></i>
+            </button>
 
             <div class="slider">
 
@@ -55,27 +56,28 @@ export default {
                     <!-- Card -->
                     <div class="card">
                         <div class="Package-card-img">
-                            <img src="https://images.pexels.com/photos/6465339/pexels-photo-6465339.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+                            <img src="https://lh3.googleusercontent.com/p/AF1QipOREocY3TG8AAA26cDWOc-8_K8O-i962LPaSAwE=s680-w680-h510" alt="">
                         </div>
                         <div class="card-text">
-                            <h2>Great Ocean Road</h2>
-                            <p><i class="fas fa-map-marker-alt"></i> Australia</p>
-                            <a class="btn btn-outline-primary rounded-pill btn-sm border-2 d-block d-lg-inline-block ms-auto my-3 my-lg-0" href="#" target="_blank">Book Now</a>
+                            <h2>ESCAPE Penang</h2>
+                            <p><i class="fas fa-map-marker-alt"></i> 1 PERSON</p>
+                            <p class="price"><i class="fas fa-tag"></i> Price <span>$34.99</span></p>
+                            <a class="btn btn-outline-primary rounded-pill btn-sm border-2 d-block d-lg-inline-block ms-auto my-3 my-lg-0" href="#" target="_blank">Find Ticket</a>
                         </div>
                     </div>
                     <!-- Card End -->
                             
                     <!-- Card -->
                     <div class="card">
-                       
+                    
                         <div class="Package-card-img">
-                            <img src="https://images.pexels.com/photos/1375383/pexels-photo-1375383.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+                            <img src="https://lh5.googleusercontent.com/p/AF1QipPKnoA6-CJazVdFeT9v3hxJTpjKZca0RYEqCKdS=w204-h114-n-k-no" alt="">
                         </div>
                         <div class="card-text">
-                            <h2>Great Ocean Road</h2>
-                            <p><i class="fas fa-map-marker-alt"></i> Australia</p>
-                            
-                            <a class="btn btn-outline-primary rounded-pill btn-sm border-2 d-block d-lg-inline-block ms-auto my-3 my-lg-0" href="#" target="_blank">Book Now</a>
+                            <h2>Singapore Flyer</h2>
+                            <p><i class="fas fa-map-marker-alt"></i> 1 PERSON</p>
+                            <p class="price"><i class="fas fa-tag"></i> Price <span>$29.49</span></p>
+                            <a class="btn btn-outline-primary rounded-pill btn-sm border-2 d-block d-lg-inline-block ms-auto my-3 my-lg-0" href="#" target="_blank">Find Ticket</a>
                         </div>
                     </div>
                         <!-- Card End -->
@@ -84,13 +86,13 @@ export default {
                     <div class="card">
                         
                         <div class="Package-card-img">
-                            <img src="https://images.pexels.com/photos/60217/pexels-photo-60217.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+                            <img src="https://images.pexels.com/photos/1178448/pexels-photo-1178448.jpeg?auto=compress&cs=tinysrgb&w=400" alt="">
                         </div>
                         <div class="card-text">
-                            <h2>Great Ocean Road</h2>
-                            <p><i class="fas fa-map-marker-alt"></i> Australia</p>
-                            
-                            <a class="btn btn-outline-primary rounded-pill btn-sm border-2 d-block d-lg-inline-block ms-auto my-3 my-lg-0" href="#" target="_blank">Book Now</a>
+                            <h2>Disneyland Paris</h2>
+                            <p><i class="fas fa-map-marker-alt"></i> 1 PERSON</p>
+                            <p class="price"><i class="fas fa-tag"></i> Price <span>$74.00</span></p>
+                            <a class="btn btn-outline-primary rounded-pill btn-sm border-2 d-block d-lg-inline-block ms-auto my-3 my-lg-0" href="#" target="_blank">Find Ticket</a>
                         </div>
                     </div>
                         <!-- Card End -->
@@ -103,9 +105,9 @@ export default {
                         </div>
                         <div class="card-text">
                             <h2>Great Ocean Road</h2>
-                            <p><i class="fas fa-map-marker-alt"></i> Australia</p>
-                            
-                            <a class="btn btn-outline-primary rounded-pill btn-sm border-2 d-block d-lg-inline-block ms-auto my-3 my-lg-0" href="#" target="_blank">Book Now</a>
+                            <p><i class="fas fa-map-marker-alt"></i> 1 PERSON,  (BY BUS)</p>
+                            <p class="price"><i class="fas fa-tag"></i> Price <span>$17.99</span></p>
+                            <a class="btn btn-outline-primary rounded-pill btn-sm border-2 d-block d-lg-inline-block ms-auto my-3 my-lg-0" href="#" target="_blank">Find Ticket</a>
                         </div>
                     </div>
                         <!-- Card End -->
@@ -119,9 +121,9 @@ export default {
                         </div>
                         <div class="card-text">
                             <h2>Great Ocean Road</h2>
-                            <p><i class="fas fa-map-marker-alt"></i> Australia</p>
-                            
-                            <a class="btn btn-outline-primary rounded-pill btn-sm border-2 d-block d-lg-inline-block ms-auto my-3 my-lg-0" href="#" target="_blank">Book Now</a>
+                            <p><i class="fas fa-map-marker-alt"></i> 1 PERSON,  (BY BUS)</p>
+                            <p class="price"><i class="fas fa-tag"></i> Price <span>$17.99</span></p>
+                            <a class="btn btn-outline-primary rounded-pill btn-sm border-2 d-block d-lg-inline-block ms-auto my-3 my-lg-0" href="#" target="_blank">Find Ticket</a>
                         </div>
                     </div>
                         <!-- Card End -->
@@ -135,9 +137,9 @@ export default {
                         </div>
                         <div class="card-text">
                             <h2>A Tropical Haven.</h2>
-                            <p><i class="fas fa-map-marker-alt"></i> Maldives</p>
-                            
-                            <a class="btn btn-outline-primary rounded-pill btn-sm border-2 d-block d-lg-inline-block ms-auto my-3 my-lg-0" href="#" target="_blank">Book Now</a>
+                            <p><i class="fas fa-map-marker-alt"></i> 1 PERSON,  (BY BUS)</p>
+                            <p class="price"><i class="fas fa-tag"></i> Price <span>$17.99</span></p>
+                            <a class="btn btn-outline-primary rounded-pill btn-sm border-2 d-block d-lg-inline-block ms-auto my-3 my-lg-0" href="#" target="_blank">Find Ticket</a>
                         </div>
                     </div>
                     <!-- Card End -->
@@ -146,26 +148,30 @@ export default {
                 
             </div>
 
+
         </div>
 
     </section>
 
 </template>
 
-<style  scoped>
-.Package{
+<style scoped>
+.Attraction{
+    width: 100%;
     padding-top: 0;
 }
 .Title{
     color: #0b3ba7 !important;
+    font-size: 40px;
     font-family: 'Fira Sans', sans-serif;
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
     text-align: start;
 }
 .description{
     font-size: 20px;
     font-family: 'Fira Sans', sans-serif;
     color: #cacaca;
+    text-align: start;
 }
 .CardSlider{
     padding-top: 4.5rem;
@@ -207,6 +213,9 @@ export default {
   font-size:1.4rem;
   line-height:3.2rem;
 }
+.fa-map-marker-alt{
+    color: #fd9604;
+}
 
 .card .card-text {
     padding: 15px;
@@ -226,6 +235,23 @@ p {
     font-weight: 600;
     margin-top: 10px;
     color: #676060;
+}
+.price{
+    margin-top: 5px;
+    font-size: 15px;
+    font-family: 'Open Sans', sans-serif;
+}
+.price span{
+    padding: 5px 15px;
+    border-radius: 25px;
+    font-size: 15px;
+    margin-left: 145px;
+    font-family: 'Open Sans', sans-serif;
+    color: #0b3ba7;
+    box-shadow: 0px 17px 35px 0px rgba(0,0,0,.1);
+}
+.fa-tag{
+    color: #fd9604;
 }
 .btn-outline-primary{
     width: 110px;
@@ -269,11 +295,11 @@ p {
   min-width:50px;
   margin:auto 10px;
   height:60px;
+  border-radius:20px;
   padding: 6px;
   font-family: 'Open Sans', sans-serif;
   font-weight: 600;
   letter-spacing: 0.5px;
-  border-radius:20px;
   background:#0b3ba7;
   color: #fff;
   border:0px;
@@ -287,7 +313,7 @@ p {
     width: 40px !important;
     height: 45px!important;
     border-radius: 50%;
-    margin-top: -195px;
+    margin-top: -185px;
     margin-left: 85%;
     padding: 0;
 }
@@ -295,7 +321,7 @@ p {
     width: 40px !important;
     height: 45px!important;
     border-radius: 50%;
-    margin-top: -240px;
+    margin-top: -230px;
     margin-left: 91%;
     padding: 0;
 }

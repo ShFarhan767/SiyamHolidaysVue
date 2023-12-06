@@ -70,3 +70,23 @@
     </div>
 
 </template>
+
+<style scoped>
+.bg-primary {
+    background-color: #2A3855 !important
+}
+.btn-outline-primary {
+    color: #fd9604 !important;
+    border-color: #fd9604 !important;
+    background: none;
+    padding: 5px 15px;
+}
+.btn-outline-primary:hover {
+    color: #fff !important;
+    background-color: #fd9604;
+    border-color: #fd9604;
+}
+.btn-outline-primary:active{
+    background: none !important;
+}
+</style>

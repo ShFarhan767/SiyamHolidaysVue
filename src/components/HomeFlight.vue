@@ -42,7 +42,7 @@
                     <!-- Card -->
                     <div class="card">
                         <div class="card-img">
-                            <img src="https://seeklogo.com/images/A/air-serbia-logo-55C73E9879-seeklogo.com.png" alt="">
+                            <img src="https://upload.wikimedia.org/wikipedia/de/thumb/b/bf/Air_Serbia_Logo.svg/2560px-Air_Serbia_Logo.svg.png" alt="">
                         </div>
                         <div class="card-text">
                             <div class="fh5co-cta-one">
@@ -200,6 +200,7 @@
     cursor: pointer;
     float: left;
     transition: all .25s ease;
+    border: none;
     box-shadow: 0px 0px 0px 0px rgba(0,0,0, .08);
 }
 .card:hover {
