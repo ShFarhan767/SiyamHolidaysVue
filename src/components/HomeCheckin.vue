@@ -575,6 +575,9 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 @media screen and (max-width: 768px) {
+    .checkBox{
+        margin-top: -25px;
+    }
     .fh5co-cta .overlay{
         height: auto;
         padding-bottom: 35px;
