@@ -44,7 +44,7 @@
 
 </template>
 
-<style>
+<style scoped>
 .offer-area{
     width: 100%;
     height: auto;

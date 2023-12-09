@@ -155,8 +155,10 @@ export default {
 
 <style scoped>
 .Transportation{
-    width: 100%;
+    width: 100% !important;
     padding-top: 0;
+    height: auto;
+    padding-bottom: 30px;
     margin-top: 100px;
 }
 .Title{

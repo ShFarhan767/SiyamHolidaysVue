@@ -153,9 +153,6 @@ export default {
 </template>
 
 <style  scoped>
-.Package{
-    padding-top: 0;
-}
 .Title{
     color: #0b3ba7 !important;
     font-family: 'Fira Sans', sans-serif;
@@ -287,7 +284,7 @@ p {
     width: 40px !important;
     height: 45px!important;
     border-radius: 50%;
-    margin-top: -195px;
+    margin-top: -175px;
     margin-left: 85%;
     padding: 0;
 }
@@ -295,7 +292,7 @@ p {
     width: 40px !important;
     height: 45px!important;
     border-radius: 50%;
-    margin-top: -240px;
+    margin-top: -222px;
     margin-left: 91%;
     padding: 0;
 }

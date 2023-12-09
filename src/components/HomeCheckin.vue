@@ -331,25 +331,26 @@ export default {
                        <div class="container ie-h-align-center-fix">
                             <div class="row">
                                 <div class="col-xs-12 ml-auto mr-auto ie-container-width-fix">
-                                    <form action="index.html" method="get" class="tm-search-form">
+                                    <form method="get" class="tm-search-form">
                                         <div class="form-row tm-search-form-row">
                                             <div class="form-group tm-form-element tm-form-element-100">
                                                 <i class="fas fa-map-marker-alt fa-2x tm-form-element-icon"></i>
-                                                <input name="city" type="text" class="form-control" id="inputCity" placeholder="Departure From">
+                                                <input name="departure" type="text" class="form-control" placeholder="Departure From">
                                             </div>
                                             <div class="form-group tm-form-element tm-form-element-50">
                                                 <i class="fas fa-map-marker-alt fa-2x tm-form-element-icon"></i>
-                                                <input name="city" type="text" class="form-control" id="inputCity" placeholder="Your Destination...">
+                                                <input name="destination" type="text" class="form-control" placeholder="Your Destination...">
                                             </div>
                                             <div class="form-group tm-form-element tm-form-element-50">
                                                 <i class="fas fa-calendar-alt fa-2x tm-form-element-icon"></i>
-                                                <input name="check-out" type="date" class="form-control" id="inputCheckOut" placeholder="Check Out">
+                                                <input name="check-out" type="date" class="form-control" placeholder="Check Out">
                                             </div>
                                         </div>
                                         <div class="form-row tm-search-form-row">
                                             <div class="form-group tm-form-element tm-form-element-2">                                            
-                                                <select name="adult" class="form-control tm-select" id="adult">
-                                                    <option value="">Adult</option>
+                                                <select name="adults" class="form-control tm-select">
+                                                    <option value="">Adults</option>
+                                                    <option value="0">0</option>
                                                     <option value="1">1</option>
                                                     <option value="2">2</option>
                                                     <option value="3">3</option>
@@ -364,7 +365,7 @@ export default {
                                                 <i class="fa fa-2x fa-user tm-form-element-icon"></i>
                                             </div>
                                             <div class="form-group tm-form-element tm-form-element-2">                                            
-                                                <select name="children" class="form-control tm-select" id="children">
+                                                <select name="children" class="form-control tm-select">
                                                     <option value="">Children</option>
                                                     <option value="0">0</option>
                                                     <option value="1">1</option>
@@ -381,8 +382,9 @@ export default {
                                                 <i class="fa fa-2x fa-user tm-form-element-icon"></i>
                                             </div>
                                             <div class="form-group tm-form-element tm-form-element-2">
-                                                <select name="room" class="form-control tm-select" id="room">
-                                                    <option value="">Room</option>
+                                                <select name="rooms" class="form-control tm-select">
+                                                    <option value="">Rooms</option>
+                                                    <option value="0">0</option>
                                                     <option value="1">1</option>
                                                     <option value="2">2</option>
                                                     <option value="3">3</option>
@@ -397,11 +399,11 @@ export default {
                                                 <i class="fa fa-2x fa-bed tm-form-element-icon"></i>
                                             </div>
                                             <div class="form-group tm-form-element tm-form-element-2">
-                                                <button type="submit" class="btn btn-primary tm-btn-search">FInd Now</button>
+                                                <button type="submit" class="btn btn-primary tm-btn-search">Find Now</button>
                                             </div>
                                         </div>
-                                        
                                     </form>
+
                                 </div>                        
                             </div>
                             
@@ -541,10 +543,19 @@ export default {
     margin-top: -100px;
 }
 .tm-form-element-icon {
-    color: #fd9604;
+    color: #fd9604 !important;
     position: absolute !important;
     top: 10px !important;
     left: 15px !important;
+}
+.tm-search-form .form-control[data-v-b37b027a] {
+    font-size: 0.8rem;
+    margin: 0;
+    padding: 0.75rem 0.75rem 0.75rem 45px;
+}
+svg:not(:root).svg-inline--fa {
+    overflow: visible;
+    color: #fff;
 }
 input[type="date"]::-webkit-calendar-picker-indicator {
   color: #FFF

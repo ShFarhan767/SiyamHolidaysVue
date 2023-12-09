@@ -133,12 +133,15 @@
 
 <style scoped>
 .Flight{
-    padding-top: 0;
-    overflow: hidden !important;
+    width: 100%;
+    height: auto;
     background: url(https://www.designbolts.com/wp-content/uploads/2021/01/rainy-clouds-with-blue-sky-wallpaper-1.jpg) no-repeat;
     background-size: cover;
-    height: auto;
+    padding-top: 0;
     padding-bottom: 15px;
+    padding-left: 0px;
+    margin-left: 0px;
+    overflow: hidden !important;
 }
 .Flight h3{
     font-family: 'Fira Sans', sans-serif;
