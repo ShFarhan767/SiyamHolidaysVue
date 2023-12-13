@@ -135,7 +135,7 @@ export default {
                             
                     <!-- Card -->
                     <div class="card">
-                        <img src="../../assets/img/Travel/Attractive/Slider-6.jpg" alt="destination" />
+                        <img src="../../assets/img/Travel/Attractive/slider-6.jpg" alt="destination" />
                         <div class="card__content">
                             <h3>Machu Picchu</h3>
                             <p>

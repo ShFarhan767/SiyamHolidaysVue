@@ -60,8 +60,8 @@ export default {
                             <img src="../../assets/img/Travel/Package/Package_Slider-1.webp" alt="">
                         </div>
                         <div class="card-text">
-                            <span class="days">8 Days Tour</span>
-                            <span class="price">$300/person</span>
+                            <span class="days">5 Days Tour</span>
+                            <span class="price">$2700/couple</span>
 
                             <h2>Great Ocean Road , Australia</h2>
                             <p class="location"><span class="fas fa-map"></span>Ocean Road , Australia</p>
@@ -78,8 +78,8 @@ export default {
                             <img src="../../assets/img/Travel/Package/Package_Slider-2.webp" alt="">
                         </div>
                         <div class="card-text">
-                            <span class="days">8 Days Tour</span>
-                            <span class="price">$300/person</span>
+                            <span class="days">11 Days Tour</span>
+                            <span class="price">$3400/person</span>
 
                             <h2>Great Ocean Road , Australia</h2>
                             <p class="location"><span class="fas fa-map"></span>Ocean Road , Australia</p>
