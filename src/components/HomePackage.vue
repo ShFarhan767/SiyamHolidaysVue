@@ -35,9 +35,11 @@ export default {
 
 <template>
     
-    <section class="Package">
+    <section class="Package fh5co-cta">
+        <div class="overlay"></div>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" class="First_svg"><path fill="#ffffff" fill-opacity="1" d="M0,160L480,96L960,192L1440,64L1440,0L960,0L480,0L0,0Z"></path></svg>
 
-        <div class="container">
+        <div class="container Package-container">
             <h2 class="Title">Package Tour</h2>
             <p class="description">Get ready for starting tour</p>
 
@@ -55,11 +57,16 @@ export default {
                     <!-- Card -->
                     <div class="card">
                         <div class="Package-card-img">
-                            <img src="https://images.pexels.com/photos/6465339/pexels-photo-6465339.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+                            <img src="../../assets/img/Travel/Package/Package_Slider-1.webp" alt="">
                         </div>
                         <div class="card-text">
-                            <h2>Great Ocean Road</h2>
-                            <p><i class="fas fa-map-marker-alt"></i> Australia</p>
+                            <span class="days">8 Days Tour</span>
+                            <span class="price">$300/person</span>
+
+                            <h2>Great Ocean Road , Australia</h2>
+                            <p class="location"><span class="fas fa-map"></span>Ocean Road , Australia</p>
+
+                            <p class="place"><span class="fas fa-mountain"></span>Near Mountain</p>
                             <a class="btn btn-outline-primary rounded-pill btn-sm border-2 d-block d-lg-inline-block ms-auto my-3 my-lg-0" href="#" target="_blank">Book Now</a>
                         </div>
                     </div>
@@ -67,76 +74,89 @@ export default {
                             
                     <!-- Card -->
                     <div class="card">
-                       
                         <div class="Package-card-img">
-                            <img src="https://images.pexels.com/photos/1375383/pexels-photo-1375383.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+                            <img src="../../assets/img/Travel/Package/Package_Slider-2.webp" alt="">
                         </div>
                         <div class="card-text">
-                            <h2>Great Ocean Road</h2>
-                            <p><i class="fas fa-map-marker-alt"></i> Australia</p>
-                            
-                            <a class="btn btn-outline-primary rounded-pill btn-sm border-2 d-block d-lg-inline-block ms-auto my-3 my-lg-0" href="#" target="_blank">Book Now</a>
-                        </div>
-                    </div>
-                        <!-- Card End -->
-                            
-                        <!-- Card -->
-                    <div class="card">
-                        
-                        <div class="Package-card-img">
-                            <img src="https://images.pexels.com/photos/60217/pexels-photo-60217.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
-                        </div>
-                        <div class="card-text">
-                            <h2>Great Ocean Road</h2>
-                            <p><i class="fas fa-map-marker-alt"></i> Australia</p>
-                            
-                            <a class="btn btn-outline-primary rounded-pill btn-sm border-2 d-block d-lg-inline-block ms-auto my-3 my-lg-0" href="#" target="_blank">Book Now</a>
-                        </div>
-                    </div>
-                        <!-- Card End -->
-                            
-                        <!-- Card -->
-                    <div class="card">
-                        
-                        <div class="Package-card-img">
-                            <img src="https://images.pexels.com/photos/261101/pexels-photo-261101.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
-                        </div>
-                        <div class="card-text">
-                            <h2>Great Ocean Road</h2>
-                            <p><i class="fas fa-map-marker-alt"></i> Australia</p>
-                            
-                            <a class="btn btn-outline-primary rounded-pill btn-sm border-2 d-block d-lg-inline-block ms-auto my-3 my-lg-0" href="#" target="_blank">Book Now</a>
-                        </div>
-                    </div>
-                        <!-- Card End -->
-                            
-                        <!-- Card -->
-                    <div class="card">
-                        
-                        <div class="Package-card-img">
-                            <img src="https://images.pexels.com/photos/1287460/pexels-photo-1287460.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+                            <span class="days">8 Days Tour</span>
+                            <span class="price">$300/person</span>
 
-                        </div>
-                        <div class="card-text">
-                            <h2>Great Ocean Road</h2>
-                            <p><i class="fas fa-map-marker-alt"></i> Australia</p>
-                            
+                            <h2>Great Ocean Road , Australia</h2>
+                            <p class="location"><span class="fas fa-map"></span>Ocean Road , Australia</p>
+
+                            <p class="place"><span class="fas fa-mountain"></span>Near Mountain</p>
                             <a class="btn btn-outline-primary rounded-pill btn-sm border-2 d-block d-lg-inline-block ms-auto my-3 my-lg-0" href="#" target="_blank">Book Now</a>
                         </div>
                     </div>
-                        <!-- Card End -->
+                    <!-- Card End -->
                             
-                        <!-- Card -->
+                    <!-- Card -->
                     <div class="card">
-                        
                         <div class="Package-card-img">
-                            <img src="https://images.pexels.com/photos/3601421/pexels-photo-3601421.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
-
+                            <img src="../../assets/img/Travel/Package/Package_Slider-3.webp" alt="">
                         </div>
                         <div class="card-text">
-                            <h2>A Tropical Haven.</h2>
-                            <p><i class="fas fa-map-marker-alt"></i> Maldives</p>
+                            <span class="days">8 Days Tour</span>
+                            <span class="price">$300/person</span>
+
+                            <h2>Great Ocean Road , Australia</h2>
+                            <p class="location"><span class="fas fa-map"></span>Ocean Road , Australia</p>
+
+                            <p class="place"><span class="fas fa-mountain"></span>Near Mountain</p>
+                            <a class="btn btn-outline-primary rounded-pill btn-sm border-2 d-block d-lg-inline-block ms-auto my-3 my-lg-0" href="#" target="_blank">Book Now</a>
+                        </div>
+                    </div>
+                    <!-- Card End -->
                             
+                    <!-- Card -->
+                    <div class="card">
+                        <div class="Package-card-img">
+                            <img src="../../assets/img/Travel/Package/Package_Slider-4.webp" alt="">
+                        </div>
+                        <div class="card-text">
+                            <span class="days">8 Days Tour</span>
+                            <span class="price">$300/person</span>
+
+                            <h2>Great Ocean Road , Australia</h2>
+                            <p class="location"><span class="fas fa-map"></span>Ocean Road , Australia</p>
+
+                            <p class="place"><span class="fas fa-mountain"></span>Near Mountain</p>
+                            <a class="btn btn-outline-primary rounded-pill btn-sm border-2 d-block d-lg-inline-block ms-auto my-3 my-lg-0" href="#" target="_blank">Book Now</a>
+                        </div>
+                    </div>
+                    <!-- Card End -->
+                            
+                    <!-- Card -->
+                    <div class="card">
+                        <div class="Package-card-img">
+                            <img src="../../assets/img/Travel/Package/Package_Slider-5.webp" alt="">
+                        </div>
+                        <div class="card-text">
+                            <span class="days">8 Days Tour</span>
+                            <span class="price">$300/person</span>
+
+                            <h2>Great Ocean Road , Australia</h2>
+                            <p class="location"><span class="fas fa-map"></span>Ocean Road , Australia</p>
+
+                            <p class="place"><span class="fas fa-mountain"></span>Near Mountain</p>
+                            <a class="btn btn-outline-primary rounded-pill btn-sm border-2 d-block d-lg-inline-block ms-auto my-3 my-lg-0" href="#" target="_blank">Book Now</a>
+                        </div>
+                    </div>
+                    <!-- Card End -->
+                            
+                    <!-- Card -->
+                    <div class="card">
+                        <div class="Package-card-img">
+                            <img src="../../assets/img/Travel/Package/Package_Slider-6.jpeg" alt="">
+                        </div>
+                        <div class="card-text">
+                            <span class="days">8 Days Tour</span>
+                            <span class="price">$300/person</span>
+
+                            <h2>Great Ocean Road , Australia</h2>
+                            <p class="location"><span class="fas fa-map"></span>Ocean Road , Australia</p>
+
+                            <p class="place"><span class="fas fa-mountain"></span>Near Mountain</p>
                             <a class="btn btn-outline-primary rounded-pill btn-sm border-2 d-block d-lg-inline-block ms-auto my-3 my-lg-0" href="#" target="_blank">Book Now</a>
                         </div>
                     </div>
@@ -148,13 +168,40 @@ export default {
 
         </div>
 
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ffffff" fill-opacity="1" d="M0,192L480,128L960,128L1440,224L1440,320L960,320L480,320L0,320Z"></path></svg>
     </section>
 
 </template>
 
 <style  scoped>
+.Package{
+    padding-bottom: 0px;
+}
+.First_svg{
+    margin-top: -120px;
+}
+.fh5co-cta{
+	background-image: url(../../assets/img/Travel/Package/package-bg.jpg);
+	height: auto;
+    z-index: 1;
+}
+.fh5co-cta .overlay {
+    background-color: rgba(0,0,0,.6);
+    opacity: .83;
+    transition: background .3s,border-radius .3s,opacity .3s;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    position: absolute;
+    z-index: -1;
+    height: auto;
+}
+.Package-container{
+    margin-top: -130px;
+}
 .Title{
-    color: #0b3ba7 !important;
+    color: #fd9604 !important;
     font-family: 'Fira Sans', sans-serif;
     letter-spacing: 1px;
     text-align: start;
@@ -173,7 +220,6 @@ export default {
   min-width: 320px;
   height:auto;
   background:#fff;
-  border-radius:30px;
   position:relative;
   z-index:10;
   margin:25px;
@@ -182,6 +228,7 @@ export default {
   transition: all .25s ease;
   border: none;
   box-shadow: 0px 0px 0px 0px rgba(0,0,0, .08);
+  border-radius: 0%;
 }
 
 .card:hover {
@@ -204,7 +251,67 @@ export default {
   font-size:1.4rem;
   line-height:3.2rem;
 }
-
+.card-text{
+    position: relative;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-top: none;
+}
+.card-text span{
+    font-size: 12px;
+    color: #999999;
+}
+.location{
+    font-size: 14px;
+    line-height: 1.8;
+    font-weight: 400;
+    color: #999999;
+}
+.location .fa-map{
+    font-size: 13px;
+    color: #999999;
+    margin: 0px 5px;
+}
+.place{
+    font-size: 16px;
+    line-height: 1.8;
+    font-weight: 400;
+    color: #999999;
+}
+.place .fa-mountain{
+    font-size: 13px;
+    color: #f9ab30;
+    margin: 0px 5px;
+}
+.card .card-text .price {
+    position: absolute;
+    top: -23px;
+    left: 50%;
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    display: inline-block;
+    background: #f9ab30;
+    color: #fff;
+    margin: 0 auto;
+    padding: 8px;
+    font-size: 16px;
+    -webkit-border-radius: 40px;
+    -moz-border-radius: 40px;
+    -ms-border-radius: 40px;
+    border-radius: 40px;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+.card:hover .card-text .price {
+    padding-left: 15px;
+    padding-right: 15px;
+    background: #33313b;
+}
+/* .card:hover img {
+    transform: scale(1.1);
+} */
 .card .card-text {
     padding: 15px;
     border-bottom-left-radius: 30px;
@@ -239,8 +346,8 @@ p {
 }
 .card img {
     width: 100%;
-    border-radius: 30px;
     height: 200px;
+    transition: transform 0.3s ease;
 }
 .card-content {
   display:flex;
@@ -281,16 +388,16 @@ p {
   transition: all .25s ease;
 }
 #prev {
-    width: 40px !important;
-    height: 45px!important;
+    width: 50px !important;
+    height: 50px!important;
     border-radius: 50%;
     margin-top: -175px;
     margin-left: 85%;
     padding: 0;
 }
 #next {
-    width: 40px !important;
-    height: 45px!important;
+    width: 50px !important;
+    height: 50px!important;
     border-radius: 50%;
     margin-top: -222px;
     margin-left: 91%;
@@ -298,8 +405,8 @@ p {
 }
 .btn:hover{
     background:transparent;
-    border: 1px solid #0b3ba7;
-    color: #0b3ba7;
+    border: 1px solid #f9ab30;
+    color: #f9ab30;
     box-shadow: 0px 17px 35px 0px rgba(0,0,0,.07);
 }
 
@@ -343,12 +450,18 @@ p {
         margin-left: 235px;
         margin-top: -70px;
     }
+    .First_svg{
+    margin-top: -85px;
+    }
+    .Package-container[data-v-9716b280] {
+    margin-top: -30px;
+    }
     .card{
         width: 100% !important;
-        margin: 0;
+        margin: 0px 20px;
     }
     .Package-card-img{
-        width: 90%;
+        width: 100%;
     }
     .btn{
         margin-right: 25px;

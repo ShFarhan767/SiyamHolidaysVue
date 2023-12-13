@@ -8,7 +8,7 @@
         <div class="swiper theme-slider min-vh-100" data-swiper='{"loop":true,"allowTouchMove":false,"autoplay":{"delay":5000},"effect":"fade","speed":800}'>
             <div class="swiper-wrapper">
                 <div class="swiper-slide" data-zanim-timeline="{}">
-                    <div class="bg-holder first-slider"></div>
+                    <div class="bg-holder" style="background-image:url(../../assets/img/header-6.jpg);"></div>
                     <!--/.bg-holder-->
                     <div class="container">
                         <div class="row min-vh-100 py-8 align-items-center" data-inertia='{"weight":1.5}'>
@@ -27,7 +27,7 @@
                     </div>
                 </div>
                 <div class="swiper-slide" data-zanim-timeline="{}">
-                    <div class="bg-holder second-slider"></div>
+                    <div class="bg-holder" style="background-image:url(../../assets/img/header-5.jpg);"></div>
                     <!--/.bg-holder-->
                     <div class="container">
                         <div class="row min-vh-100 py-8 align-items-center" data-inertia='{"weight":1.5}'>
@@ -46,7 +46,7 @@
                     </div>
                 </div>
                 <div class="swiper-slide" data-zanim-timeline="{}">
-                    <div class="bg-holder third-slider"></div>
+                    <div class="bg-holder" style="background-image:url(../../assets/img/header-1.jpg);"></div>
                     <!--/.bg-holder-->
                     <div class="container">
                         <div class="row min-vh-100 py-8 align-items-center" data-inertia='{"weight":1.5}'>
@@ -65,6 +65,7 @@
                     </div>
                 </div>
             </div>
+
             <div class="swiper-nav">
                 <div class="swiper-button-prev"><span class="fas fa-chevron-left"></span></div>
                 <div class="swiper-button-next"><span class="fas fa-chevron-right"></span></div>
@@ -75,16 +76,8 @@
 </template>
 
 <style scoped>
-.first-slider{
-    background-image:url(../../assets/img/Travel/Slider-Bg-1.jpeg);
-}
-.second-slider{
-    background-image:url(../../assets/img/Travel/Slider-Bg-2.jpeg);
-}
-.third-slider{
-    background-image:url(../../assets/img/Travel/Slider-Bg-3.jpeg);
-}
-.fs-4 {
+
+/* .fs-4 {
     color: #fd9604 !important;
 }
 .text-primary {
@@ -119,5 +112,5 @@
 }
 .btn-warning:focus {
     box-shadow: none;
-}
+} */
 </style>

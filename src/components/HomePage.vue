@@ -13,13 +13,13 @@ import HomeAttraction from './HomeAttraction.vue';
 <template>
         <main class="main" id="top">
             <HomeSlider />
+            <HomeOffer />
             <HomeCheckin />
             <HomeCard />
+            <HomeFlight />
 
-            <HomeOffer />
 
             <HomePackage />
-            <HomeFlight />
             <HomeTransport />
             <HomeAttraction />
         </main>

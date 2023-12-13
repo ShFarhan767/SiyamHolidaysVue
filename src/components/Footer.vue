@@ -34,9 +34,9 @@
                             <div class="col-md-3 col-sm-6 padding">
                                 <h6 class="heading7"> About Us </h6>
                                 <ul class="footer-ul" style="font-weight: normal;">
-                                    <li><a href="howtobook.php"> How to Book </a></li>
-                                    <li><a href="contact.php"> Contact Us </a></li>
-                                    <li><a href="helpcenter.php"> Help Center </a></li>
+                                    <li><a href="#"> How to Book </a></li>
+                                    <li><a href="#"> Contact Us </a></li>
+                                    <li><a href="#"> Help Center </a></li>
                                     <li><a href="#"> About Us </a></li>
                                     <li> 
                                 

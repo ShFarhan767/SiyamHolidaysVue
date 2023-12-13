@@ -426,6 +426,7 @@ export default {
 
 <style scoped>
 @import url('../../assets/css/tooplate-style.css');
+@import url('../../assets/css/bootstrap.min.css');
 .checkBox{
     margin: 0;
     padding: 0;
@@ -433,7 +434,7 @@ export default {
 }
 .fh5co-cta{
     background-image: url(https://demothemedh.b-cdn.net/moteling/wp-content/uploads/2021/12/slider-2.jpg);
-    height: auto;
+    height: 430px;
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -456,12 +457,12 @@ export default {
 .tab_box{
     width: 117%;
     overflow: hidden !important;
-    margin-top: 80px;
+    margin-top: 25px;
     margin-left: -94px !important;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    border-bottom: 2px solid #5d616c !important;
+    border-bottom: 1px solid #5d616c !important;
     z-index: -20;
     position: relative;
 }
@@ -490,7 +491,7 @@ export default {
     background: #fd9604;
     border: 1px solid #fd9604;
     color: #fff;
-    width: 55px;
+    width: 50px;
     height: 50px;
     margin-top: -15px !important;
     padding: 10px;
@@ -499,10 +500,31 @@ export default {
     transition: 0.5s all;
     z-index: 999;
 }
+button:focus {
+    outline: none;
+    outline: none;
+}
 .btn-primary{
+    width: 100%;
+    height: 100%;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
     background: #fd9604;
     color: #fff;
     border: 1px solid #fd9604;
+}
+.btn-primary:active{
+    background: #fd9604 !important;
+    color: #fff;
+    border: 1px solid #fd9604 !important;
+    box-shadow: none !important;
+}
+.btn-primary:focus{
+    background: #fd9604 !important;
+    color: #fff;
+    border: 1px solid #fd9604 !important;
+    box-shadow: none !important;
 }
 .btn-primary:hover{
     background: none;
@@ -513,9 +535,9 @@ export default {
     position: absolute;
     width: 88px !important;
     left: 122px ;
-    top: 145px !important;
+    top: 90px !important;
     z-index: -1;
-    height: 4px;
+    height: 2px;
     background-color: #fd9604;
     border-radius: 10px;
     transition: width 0.3s ease, left 0.3s ease, top 0.3s ease;
@@ -586,11 +608,13 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 @media screen and (max-width: 768px) {
+    .fh5co-cta{
+        height: auto !important;
+    }
     .checkBox{
         margin-top: -25px;
     }
     .fh5co-cta .overlay{
-        height: auto;
         padding-bottom: 35px;
     }
     #tm-section-1{
@@ -602,13 +626,18 @@ input[type="date"]::-webkit-calendar-picker-indicator {
         font-size: 15px;
         padding: 0px;
     }
+    .btn-primary{
+        font-size: 12px;
+    }
     .tab_box{
         margin-left: -30px !important;
         width: 320px;
     }
     .line{
         width: 55px !important;
-        height: 3px;
+        height: 2px;
+        top: 91px !important;
+        left: 35px;
     }
     .package-input{
         width: 100% !important;

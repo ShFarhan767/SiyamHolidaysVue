@@ -1964,20 +1964,22 @@ var tooltipInit = function tooltipInit() {
 global CustomEase, gsap
 */
 
+
+// CustomEase.create('CubicBezier', '.77,0,.18,1');
 /*-----------------------------------------------
 |   Global Functions
 -----------------------------------------------*/
 
-// var filterBlur = function filterBlur() {
-//   var blur = 'blur(5px)';
-//   var isIpadIphoneMacFirefox = (window.is.ios() || window.is.mac()) && window.is.firefox();
+var filterBlur = function filterBlur() {
+  var blur = 'blur(5px)';
+  var isIpadIphoneMacFirefox = (window.is.ios() || window.is.mac()) && window.is.firefox();
 
-//   if (isIpadIphoneMacFirefox) {
-//     blur = 'blur(0px)';
-//   }
+  if (isIpadIphoneMacFirefox) {
+    blur = 'blur(0px)';
+  }
 
-//   return blur;
-// };
+  return blur;
+};
 
 var zanimationEffects = {
   "default": {

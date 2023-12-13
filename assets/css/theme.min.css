@@ -5192,7 +5192,7 @@ fieldset:disabled .btn {
 
 .nav-link:hover,
 .nav-link:focus {
-    color: #fd9604;
+    color: #222d44;
     text-decoration: none
 }
 
@@ -5621,7 +5621,8 @@ fieldset:disabled .btn {
 
     .navbar-expand-lg .navbar-nav .nav-link {
         padding-right: 1.2rem;
-        padding-left: 1.2rem
+        padding-left: 1.2rem;
+        color: #2a3855 !important;
     }
 
     .navbar-expand-lg .navbar-nav-scroll {
@@ -9802,7 +9803,7 @@ fieldset:disabled .btn {
 
 .text-warning {
     --elixir-text-opacity: 1;
-    color: #fd9604 ;
+    color: #fd9604 !important;
 }
 
 .text-danger {
@@ -19923,15 +19924,15 @@ hr.muted {
     height: .438rem;
     width: .438rem;
     border: none;
-    border-right: 3px solid #fd9604;
-    border-bottom: 3px solid #fd9604;
+    border-right: 3px solid #2a3855;
+    border-bottom: 3px solid #2a3855;
     border-radius: .063rem;
     -webkit-transform: translateY(-50%) rotate(45deg);
     -ms-transform: translateY(-50%) rotate(45deg);
     transform: translateY(-50%) rotate(45deg);
-    -webkit-transition: all .2s ease-in-out;
-    -o-transition: all .2s ease-in-out;
-    transition: all .2s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
     -webkit-transform-origin: center;
     -ms-transform-origin: center;
     transform-origin: center;

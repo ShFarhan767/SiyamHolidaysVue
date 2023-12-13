@@ -156,10 +156,9 @@ export default {
 <style scoped>
 .Transportation{
     width: 100% !important;
-    padding-top: 0;
+    padding-top: 1rem;
     height: auto;
-    padding-bottom: 30px;
-    margin-top: 100px;
+    padding-bottom: 30px5
 }
 .Title{
     color: #0b3ba7 !important;
@@ -311,16 +310,16 @@ p {
   transition: all .25s ease;
 }
 #prev {
-    width: 40px !important;
-    height: 45px!important;
+    width: 50px !important;
+    height: 50px!important;
     border-radius: 50%;
     margin-top: -185px;
     margin-left: 85%;
     padding: 0;
 }
 #next {
-    width: 40px !important;
-    height: 45px!important;
+    width: 50px !important;
+    height: 50px!important;
     border-radius: 50%;
     margin-top: -230px;
     margin-left: 91%;

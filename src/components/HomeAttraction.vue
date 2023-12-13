@@ -55,13 +55,15 @@ export default {
                 <div class="card-content">
                     <!-- Card -->
                     <div class="card">
-                        <div class="Package-card-img">
-                            <img src="https://lh3.googleusercontent.com/p/AF1QipOREocY3TG8AAA26cDWOc-8_K8O-i962LPaSAwE=s680-w680-h510" alt="">
-                        </div>
-                        <div class="card-text">
-                            <h2>ESCAPE Penang</h2>
-                            <p><i class="fas fa-map-marker-alt"></i> 1 PERSON</p>
-                            <p class="price"><i class="fas fa-tag"></i> Price <span>$34.99</span></p>
+                        <img src="../../assets/img/Travel/Attractive/Slider-1.jpg" alt="destination" />
+                        <div class="card__content">
+                            <h3>Thailand , Bali Island</h3>
+                            <p>
+                                Discover off-the-beaten-path locations and hidden gems within
+                                dream destinations, taking you beyond the typical tourist spots.
+                            </p>
+                            <p><i class="fas fa-map-marker-alt"></i> 2 PERSON</p>
+                            <p class="price"><i class="fas fa-tag"></i> Price <span>$173.99</span></p>
                             <a class="btn btn-outline-primary rounded-pill btn-sm border-2 d-block d-lg-inline-block ms-auto my-3 my-lg-0" href="#" target="_blank">Find Ticket</a>
                         </div>
                     </div>
@@ -69,76 +71,79 @@ export default {
                             
                     <!-- Card -->
                     <div class="card">
-                    
-                        <div class="Package-card-img">
-                            <img src="https://lh5.googleusercontent.com/p/AF1QipPKnoA6-CJazVdFeT9v3hxJTpjKZca0RYEqCKdS=w204-h114-n-k-no" alt="">
-                        </div>
-                        <div class="card-text">
-                            <h2>Singapore Flyer</h2>
+                        <img src="../../assets/img/Travel/Attractive/Slider-2.jpg" alt="destination" />
+                        <div class="card__content">
+                            <h3>El Nido’s Beach</h3>
+                            <p>
+                                Discover off-the-beaten-path locations and hidden gems within
+                                dream destinations, taking you beyond the typical tourist spots.
+                            </p>
                             <p><i class="fas fa-map-marker-alt"></i> 1 PERSON</p>
-                            <p class="price"><i class="fas fa-tag"></i> Price <span>$29.49</span></p>
+                            <p class="price"><i class="fas fa-tag"></i> Price <span>$89.99</span></p>
                             <a class="btn btn-outline-primary rounded-pill btn-sm border-2 d-block d-lg-inline-block ms-auto my-3 my-lg-0" href="#" target="_blank">Find Ticket</a>
                         </div>
                     </div>
-                        <!-- Card End -->
+                     <!-- Card End -->
                             
-                        <!-- Card -->
+                    <!-- Card -->
                     <div class="card">
-                        
-                        <div class="Package-card-img">
-                            <img src="https://images.pexels.com/photos/1178448/pexels-photo-1178448.jpeg?auto=compress&cs=tinysrgb&w=400" alt="">
-                        </div>
-                        <div class="card-text">
-                            <h2>Disneyland Paris</h2>
+                        <img src="../../assets/img/Travel/Attractive/Slider-3.jpeg" alt="destination" />
+                        <div class="card__content">
+                            <h3>Ancient Antique</h3>
+                            <p>
+                                Discover off-the-beaten-path locations and hidden gems within
+                                dream destinations, taking you beyond the typical tourist spots.
+                            </p>
                             <p><i class="fas fa-map-marker-alt"></i> 1 PERSON</p>
-                            <p class="price"><i class="fas fa-tag"></i> Price <span>$74.00</span></p>
+                            <p class="price"><i class="fas fa-tag"></i> Price <span>$127.99</span></p>
                             <a class="btn btn-outline-primary rounded-pill btn-sm border-2 d-block d-lg-inline-block ms-auto my-3 my-lg-0" href="#" target="_blank">Find Ticket</a>
                         </div>
                     </div>
-                        <!-- Card End -->
+                    <!-- Card End -->
                             
-                        <!-- Card -->
+                    <!-- Card -->
                     <div class="card">
-                        
-                        <div class="Package-card-img">
-                            <img src="https://images.pexels.com/photos/261101/pexels-photo-261101.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
-                        </div>
-                        <div class="card-text">
-                            <h2>Great Ocean Road</h2>
-                            <p><i class="fas fa-map-marker-alt"></i> 1 PERSON,  (BY BUS)</p>
-                            <p class="price"><i class="fas fa-tag"></i> Price <span>$17.99</span></p>
+                        <img src="../../assets/img/Travel/Attractive/Slider-4.jpeg" alt="destination" />
+                        <div class="card__content">
+                            <h3>Malaysia</h3>
+                            <p>
+                                Discover off-the-beaten-path locations and hidden gems within
+                                dream destinations, taking you beyond the typical tourist spots.
+                            </p>
+                            <p><i class="fas fa-map-marker-alt"></i> 1 PERSON</p>
+                            <p class="price"><i class="fas fa-tag"></i> Price <span>$77.99</span></p>
                             <a class="btn btn-outline-primary rounded-pill btn-sm border-2 d-block d-lg-inline-block ms-auto my-3 my-lg-0" href="#" target="_blank">Find Ticket</a>
                         </div>
                     </div>
-                        <!-- Card End -->
+                    <!-- Card End -->
                             
-                        <!-- Card -->
+                    <!-- Card -->
                     <div class="card">
-                        
-                        <div class="Package-card-img">
-                            <img src="https://images.pexels.com/photos/1287460/pexels-photo-1287460.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
-
-                        </div>
-                        <div class="card-text">
-                            <h2>Great Ocean Road</h2>
-                            <p><i class="fas fa-map-marker-alt"></i> 1 PERSON,  (BY BUS)</p>
-                            <p class="price"><i class="fas fa-tag"></i> Price <span>$17.99</span></p>
+                        <img src="../../assets/img/Travel/Attractive/Slider-5.jpg" alt="destination" />
+                        <div class="card__content">
+                            <h3>Singapore</h3>
+                            <p>
+                                Discover off-the-beaten-path locations and hidden gems within
+                                dream destinations, taking you beyond the typical tourist spots.
+                            </p>
+                            <p><i class="fas fa-map-marker-alt"></i> 2 PERSON</p>
+                            <p class="price"><i class="fas fa-tag"></i> Price <span>$181.99</span></p>
                             <a class="btn btn-outline-primary rounded-pill btn-sm border-2 d-block d-lg-inline-block ms-auto my-3 my-lg-0" href="#" target="_blank">Find Ticket</a>
                         </div>
                     </div>
-                        <!-- Card End -->
+                    <!-- Card End -->
                             
-                        <!-- Card -->
+                    <!-- Card -->
                     <div class="card">
-                        
-                        <div class="Package-card-img">
-                            <img src="https://images.pexels.com/photos/3601421/pexels-photo-3601421.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
-
-                        </div>
-                        <div class="card-text">
-                            <h2>A Tropical Haven.</h2>
-                            <p><i class="fas fa-map-marker-alt"></i> 1 PERSON,  (BY BUS)</p>
-                            <p class="price"><i class="fas fa-tag"></i> Price <span>$17.99</span></p>
+                        <img src="../../assets/img/Travel/Attractive/Slider-6.jpg" alt="destination" />
+                        <div class="card__content">
+                            <h3>Machu Picchu</h3>
+                            <p>
+                                Discover off-the-beaten-path locations and hidden gems within
+                                dream destinations, taking you beyond the typical tourist spots.
+                            </p>
+                            <p><i class="fas fa-map-marker-alt"></i> 2 PERSON</p>
+                            <p class="price"><i class="fas fa-tag"></i> Price <span>$147.99</span></p>
                             <a class="btn btn-outline-primary rounded-pill btn-sm border-2 d-block d-lg-inline-block ms-auto my-3 my-lg-0" href="#" target="_blank">Find Ticket</a>
                         </div>
                     </div>
@@ -159,13 +164,20 @@ export default {
 .Attraction{
     width: 100%;
     padding-top: 0;
+    padding-bottom: 3rem;
+    background: linear-gradient( to right, rgba(2, 82, 89, 0.9), rgba(255, 255, 255, 0) ), url(../../assets/img/Travel/Attractive/bg.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
 }
 .Title{
     color: #0b3ba7 !important;
-    font-size: 40px;
+    font-size: 44px;
     font-family: 'Fira Sans', sans-serif;
     letter-spacing: 0.5px;
     text-align: start;
+    margin-top: 50px;
 }
 .description{
     font-size: 20px;
@@ -173,6 +185,23 @@ export default {
     color: #cacaca;
     text-align: start;
 }
+
+.card__content {
+  padding: 1rem;
+}
+
+.card__content h3 {
+    font-size: 24px;
+    color: #0b3ba7;
+}
+
+.card__content p {
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  line-height: 1.5rem;
+  color: #94a3b8;
+}
+
 .CardSlider{
     padding-top: 4.5rem;
     overflow: hidden !important;
@@ -180,9 +209,9 @@ export default {
 .card {
   width: 320px;
   min-width: 320px;
-  height:auto;
-  background:#fff;
-  border-radius:30px;
+  height:100%;
+  background-color: #fff;
+  box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.7);
   position:relative;
   z-index:10;
   margin:25px;
@@ -190,7 +219,7 @@ export default {
   cursor:pointer;
   transition: all .25s ease;
   border: none;
-  box-shadow: 0px 0px 0px 0px rgba(0,0,0, .08);
+  border-radius: 0%;
 }
 
 .card:hover {
@@ -219,8 +248,6 @@ export default {
 
 .card .card-text {
     padding: 15px;
-    border-bottom-left-radius: 30px;
-    border-bottom-right-radius: 30px;
 }
 
 .card-text h2{
@@ -268,7 +295,6 @@ p {
 }
 .card img {
     width: 100%;
-    border-radius: 30px;
     height: 200px;
 }
 .card-content {
@@ -310,16 +336,16 @@ p {
   transition: all .25s ease;
 }
 #prev {
-    width: 40px !important;
-    height: 45px!important;
+    width: 50px !important;
+    height: 50px!important;
     border-radius: 50%;
     margin-top: -185px;
     margin-left: 85%;
     padding: 0;
 }
 #next {
-    width: 40px !important;
-    height: 45px!important;
+    width: 50px !important;
+    height: 50px!important;
     border-radius: 50%;
     margin-top: -230px;
     margin-left: 91%;
@@ -327,8 +353,8 @@ p {
 }
 .btn:hover{
     background:transparent;
-    border: 1px solid #0b3ba7;
-    color: #0b3ba7;
+    border: 1px solid #fff;
+    color: #fff;
     box-shadow: 0px 17px 35px 0px rgba(0,0,0,.07);
 }
 
