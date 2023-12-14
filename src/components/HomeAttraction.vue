@@ -142,7 +142,7 @@ export default {
                                 Discover off-the-beaten-path locations and hidden gems within
                                 dream destinations, taking you beyond the typical tourist spots.
                             </p>
-                            <p><i class="fas fa-map-marker-alt"></i> 2 PERSON</p>
+                            <p><i class="far fa-user"></i> 2 PERSON</p>
                             <p class="price"><i class="fas fa-tag"></i> Price <span>$147.99</span></p>
                             <a class="btn btn-outline-primary rounded-pill btn-sm border-2 d-block d-lg-inline-block ms-auto my-3 my-lg-0" href="#" target="_blank">Find Ticket</a>
                         </div>
@@ -238,11 +238,10 @@ export default {
   position:absolute;
   right: 0;
   top: 0;
-  padding: 15px;
-  font-size:1.4rem;
+  font-size:1.2rem;
   line-height:3.2rem;
 }
-.fa-map-marker-alt{
+.fa-user{
     color: #fd9604;
 }
 
@@ -400,7 +399,7 @@ p {
     }
     .card{
         width: 100% !important;
-        margin: 0;
+        margin: 0px 20px;
     }
     .Package-card-img{
         width: 90%;

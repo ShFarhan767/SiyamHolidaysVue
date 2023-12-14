@@ -8,6 +8,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "primeicons": "^6.0.1",
+    "primevue": "^3.44.0",
     "vue": "^3.3.4",
     "vue-awesome-swiper": "^5.0.1",
     "vue-router": "^4.2.5"

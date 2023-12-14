@@ -1,45 +1,66 @@
-<script>
-export default {
-    data() {
-      return {
-        tabs: null,
-        allContent: null,
-        line: null
-      };
-    },
-    mounted() {
-      this.$nextTick(() => {
-        this.initTabs();
-      });
-    },
-    methods: {
-      initTabs() {
-        this.tabs = document.querySelectorAll('.tab_btn');
-        this.allContent = document.querySelectorAll('.content');
-        this.line = document.querySelector('.line');
-  
-        this.tabs.forEach((tab, index) => {
-          tab.addEventListener('click', (e) => {
-            this.tabs.forEach(t => t.classList.remove('active'));
-            this.allContent.forEach(content => content.classList.remove('active'));
-  
-            tab.classList.add('active');
-  
-            const tabIndex = Array.from(this.tabs).indexOf(tab);
-            this.allContent[tabIndex].classList.add('active');
-  
-            // Update line position to connect with the middle of the clicked button
-            const buttonMiddle = e.target.offsetLeft + e.target.offsetWidth / 2;
-            this.line.style.width = e.target.offsetWidth + "px";
-            this.line.style.left = buttonMiddle - this.line.offsetWidth / 2 + "px";
-            this.line.style.top = e.target.offsetTop + e.target.offsetHeight + "px";
-          });
-        });
-      }
-    }
+<script setup>
+import { ref, onMounted } from 'vue';
+
+const tabs = ref(null);
+const allContent = ref(null);
+const line = ref(null);
+
+onMounted(() => {
+  initTabs();
+});
+
+const initTabs = () => {
+  tabs.value = document.querySelectorAll('.tab_btn');
+  allContent.value = document.querySelectorAll('.content');
+  line.value = document.querySelector('.line');
+
+  tabs.value.forEach((tab, index) => {
+    tab.addEventListener('click', (e) => {
+      tabs.value.forEach((t) => t.classList.remove('active'));
+      allContent.value.forEach((content) => content.classList.remove('active'));
+
+      tab.classList.add('active');
+
+      const tabIndex = Array.from(tabs.value).indexOf(tab);
+      allContent.value[tabIndex].classList.add('active');
+
+      // Update line position to connect with the middle of the clicked button
+      const buttonMiddle = e.target.offsetLeft + e.target.offsetWidth / 2;
+      line.value.style.width = e.target.offsetWidth + 'px';
+      line.value.style.left = buttonMiddle - line.value.offsetWidth / 2 + 'px';
+      line.value.style.top = e.target.offsetTop + e.target.offsetHeight + 'px';
+    });
+  });
 };
+import 'primevue/resources/themes/lara-light-amber/theme.css';
+
+import Calendar from 'primevue/calendar';
+
+const checkInDate = ref(null);
+const checkOutDate = ref(null);
+
+const buttondisplay = ref();
+const icondisplay = ref();
+const templatedisplay = ref();
 
 
+import InputText from 'primevue/inputtext';
+
+const value1 = ref(null);
+const value3 = ref(null);
+const value4 = ref(null);
+const value5 = ref(null);
+
+
+import Dropdown from 'primevue/dropdown';
+const selectedItem = ref();
+const items = ref(Array.from({ length: 10 }, (_, i) => ({ label: `${i}`, value: i })));
+
+const selectedItem2 = ref();
+const items2 = ref(Array.from({ length: 10 }, (_, i) => ({ label: `${i}`, value: i })));
+
+const selectedItem3 = ref();
+const items3 = ref(Array.from({ length: 10 }, (_, i) => ({ label: `${i}`, value: i })));
 </script>
 
 <template>
@@ -72,66 +93,37 @@ export default {
                                     <form action="index.html" method="get" class="tm-search-form">
                                         <div class="form-row tm-search-form-row">
                                             <div class="form-group tm-form-element tm-form-element-100">
-                                                <i class="fas fa-map-marker-alt fa-2x tm-form-element-icon"></i>
-                                                <input name="city" type="text" class="form-control" id="inputCity" placeholder="Type your destination...">
+                                                
+                                                <span class="p-input-icon-left">
+                                                    <i class="fas fa-map-marker-alt fa-2x tm-form-element-icon"></i>
+                                                    <InputText v-model="value1" showIcon iconDisplay="input" placeholder="Destination" />
+                                                </span>
+
                                             </div>
                                             <div class="form-group tm-form-element tm-form-element-50">
-                                                <i class="fas fa-calendar-alt fa-2x tm-form-element-icon"></i>
-                                                <input name="check-in" type="date" class="form-control" id="inputCheckIn" placeholder="Check In">
+                                                
+                                                <Calendar v-model="icondisplay" showIcon iconDisplay="input" inputId="icondisplay" placeholder="CheckIn Date"/>
+
                                             </div>
                                             <div class="form-group tm-form-element tm-form-element-50">
-                                                <i class="fas fa-calendar-alt fa-2x tm-form-element-icon"></i>
-                                                <input name="check-out" type="date" class="form-control" id="inputCheckOut" placeholder="Check Out">
+
+                                                <Calendar v-model="checkOutDate" showIcon iconDisplay="input" inputId="checkOutDateInput" placeholder="CheckOut Date"/>
+                                            
                                             </div>
                                         </div>
                                         <div class="form-row tm-search-form-row">
-                                            <div class="form-group tm-form-element tm-form-element-2">                                            
-                                                <select name="adult" class="form-control tm-select" id="adult">
-                                                    <option value="">Adult</option>
-                                                    <option value="1">1</option>
-                                                    <option value="2">2</option>
-                                                    <option value="3">3</option>
-                                                    <option value="4">4</option>
-                                                    <option value="5">5</option>
-                                                    <option value="6">6</option>
-                                                    <option value="7">7</option>
-                                                    <option value="8">8</option>
-                                                    <option value="9">9</option>
-                                                    <option value="10">10</option>
-                                                </select>
+                                            <div class="form-group tm-form-element tm-form-element-2">
+
+                                                <Dropdown v-model="selectedItem" :options="items" optionLabel="label" optionValue="value" :virtualScrollerOptions="{ itemSize: 38 }" placeholder="Adults" class="w-full md:w-14rem" />
+
                                                 <i class="fa fa-2x fa-user tm-form-element-icon"></i>
                                             </div>
                                             <div class="form-group tm-form-element tm-form-element-2">                                            
-                                                <select name="children" class="form-control tm-select" id="children">
-                                                    <option value="">Children</option>
-                                                    <option value="0">0</option>
-                                                    <option value="1">1</option>
-                                                    <option value="2">2</option>
-                                                    <option value="3">3</option>
-                                                    <option value="4">4</option>
-                                                    <option value="5">5</option>
-                                                    <option value="6">6</option>
-                                                    <option value="7">7</option>
-                                                    <option value="8">8</option>
-                                                    <option value="9">9</option>
-                                                    <option value="10">10</option>
-                                                </select>
+                                                <Dropdown v-model="selectedItem2" :options="items2" optionLabel="label" optionValue="value" :virtualScrollerOptions="{ itemSize: 38 }" placeholder="Children" class="w-full md:w-14rem" />
                                                 <i class="fa fa-2x fa-user tm-form-element-icon"></i>
                                             </div>
                                             <div class="form-group tm-form-element tm-form-element-2">
-                                                <select name="room" class="form-control tm-select" id="room">
-                                                    <option value="">Room</option>
-                                                    <option value="1">1</option>
-                                                    <option value="2">2</option>
-                                                    <option value="3">3</option>
-                                                    <option value="4">4</option>
-                                                    <option value="5">5</option>
-                                                    <option value="6">6</option>
-                                                    <option value="7">7</option>
-                                                    <option value="8">8</option>
-                                                    <option value="9">9</option>
-                                                    <option value="10">10</option>
-                                                </select>
+                                                <Dropdown v-model="selectedItem3" :options="items3" optionLabel="label" optionValue="value" :virtualScrollerOptions="{ itemSize: 38 }" placeholder="Rooms" class="w-full md:w-14rem" />
                                                 <i class="fa fa-2x fa-bed tm-form-element-icon"></i>
                                             </div>
                                             <div class="form-group tm-form-element tm-form-element-2">
@@ -159,70 +151,43 @@ export default {
                                     <form action="index.html" method="get" class="tm-search-form">
                                         <div class="form-row tm-search-form-row">
                                             <div class="form-group tm-form-element tm-form-element-100">
-                                                <i class="fas fa-map-marker-alt fa-2x tm-form-element-icon"></i>
-                                                <input name="city" type="text" class="form-control" id="inputCity" placeholder="Type your destination...">
+                                                
+                                                <span class="p-input-icon-left">
+                                                    <i class="fas fa-map-marker-alt fa-2x tm-form-element-icon"></i>
+                                                    <InputText v-model="value1" showIcon iconDisplay="input" placeholder="Destination" />
+                                                </span>
+
                                             </div>
                                             <div class="form-group tm-form-element tm-form-element-50">
-                                                <i class="fas fa-calendar-alt fa-2x tm-form-element-icon"></i>
-                                                <input name="check-in" type="date" class="form-control" id="inputCheckIn" placeholder="Check In">
+                                                
+                                                <Calendar v-model="icondisplay" showIcon iconDisplay="input" inputId="icondisplay" placeholder="CheckIn Date"/>
+
                                             </div>
                                             <div class="form-group tm-form-element tm-form-element-50">
-                                                <i class="fas fa-calendar-alt fa-2x tm-form-element-icon"></i>
-                                                <input name="check-out" type="date" class="form-control" id="inputCheckOut" placeholder="Check Out">
+
+                                                <Calendar v-model="checkOutDate" showIcon iconDisplay="input" inputId="checkOutDateInput" placeholder="CheckOut Date"/>
+                                            
                                             </div>
                                         </div>
                                         <div class="form-row tm-search-form-row">
-                                            <div class="form-group tm-form-element tm-form-element-2">                                            
-                                                <select name="adult" class="form-control tm-select" id="adult">
-                                                    <option value="">Adult</option>
-                                                    <option value="1">1</option>
-                                                    <option value="2">2</option>
-                                                    <option value="3">3</option>
-                                                    <option value="4">4</option>
-                                                    <option value="5">5</option>
-                                                    <option value="6">6</option>
-                                                    <option value="7">7</option>
-                                                    <option value="8">8</option>
-                                                    <option value="9">9</option>
-                                                    <option value="10">10</option>
-                                                </select>
+                                            <div class="form-group tm-form-element tm-form-element-2">
+
+                                                <Dropdown v-model="selectedItem" :options="items" optionLabel="label" optionValue="value" :virtualScrollerOptions="{ itemSize: 38 }" placeholder="Adults" class="w-full md:w-14rem" />
+
                                                 <i class="fa fa-2x fa-user tm-form-element-icon"></i>
-                                            </div>
-                                            <div class="form-group tm-form-element tm-form-element-2">                                            
-                                                <select name="children" class="form-control tm-select" id="children">
-                                                    <option value="">Children</option>
-                                                    <option value="0">0</option>
-                                                    <option value="1">1</option>
-                                                    <option value="2">2</option>
-                                                    <option value="3">3</option>
-                                                    <option value="4">4</option>
-                                                    <option value="5">5</option>
-                                                    <option value="6">6</option>
-                                                    <option value="7">7</option>
-                                                    <option value="8">8</option>
-                                                    <option value="9">9</option>
-                                                    <option value="10">10</option>
-                                                </select>
-                                                <i class="fa fa-2x fa-user tm-form-element-icon"></i>
+
                                             </div>
                                             <div class="form-group tm-form-element tm-form-element-2">
-                                                <select name="room" class="form-control tm-select" id="room">
-                                                    <option value="">Room</option>
-                                                    <option value="1">1</option>
-                                                    <option value="2">2</option>
-                                                    <option value="3">3</option>
-                                                    <option value="4">4</option>
-                                                    <option value="5">5</option>
-                                                    <option value="6">6</option>
-                                                    <option value="7">7</option>
-                                                    <option value="8">8</option>
-                                                    <option value="9">9</option>
-                                                    <option value="10">10</option>
-                                                </select>
+                                                <Dropdown v-model="selectedItem2" :options="items2" optionLabel="label" optionValue="value" :virtualScrollerOptions="{ itemSize: 38 }" placeholder="Children" class="w-full md:w-14rem" />
+                                                <i class="fa fa-2x fa-user tm-form-element-icon"></i>
+
+                                            </div>
+                                            <div class="form-group tm-form-element tm-form-element-2">
+                                                <Dropdown v-model="selectedItem3" :options="items3" optionLabel="label" optionValue="value" :virtualScrollerOptions="{ itemSize: 38 }" placeholder="Rooms" class="w-full md:w-14rem" />
                                                 <i class="fa fa-2x fa-bed tm-form-element-icon"></i>
                                             </div>
                                             <div class="form-group tm-form-element tm-form-element-2">
-                                                <button type="submit" class="btn btn-primary tm-btn-search">Flight Availability</button>
+                                                <button type="submit" class="btn btn-primary tm-btn-search">Check Flight</button>
                                             </div>
                                         </div>
                                         
@@ -245,12 +210,15 @@ export default {
                                     <form action="index.html" method="get" class="tm-search-form">
                                         <div class="form-row tm-search-form-row">
                                             <div class="form-group tm-form-element tm-form-element-100 package-input">
-                                                <i class="fas fa-map-marker-alt fa-2x tm-form-element-icon"></i>
-                                                <input name="city" type="text" class="form-control" id="inputCity" placeholder="Type your destination...">
+
+                                                <span class="p-input-icon-left">
+                                                    <i class="fas fa-map-marker-alt fa-2x tm-form-element-icon"></i>
+                                                    <InputText v-model="value3" showIcon iconDisplay="input" placeholder="Destination" />
+                                                </span>
+
                                             </div>
                                             <div class="form-group tm-form-element tm-form-element-50 package-input">
-                                                <i class="fas fa-calendar-alt fa-2x tm-form-element-icon"></i>
-                                                <input name="check-in" type="date" class="form-control" id="inputCheckIn" placeholder="Check In">
+                                                <Calendar v-model="icondisplay" showIcon iconDisplay="input" inputId="icondisplay" placeholder="Tour Date"/>
                                             </div>
                                             <!-- <div class="form-group tm-form-element tm-form-element-50">
                                                 <i class="fas fa-calendar-alt fa-2x tm-form-element-icon"></i>
@@ -258,58 +226,25 @@ export default {
                                             </div> -->
                                         </div>
                                         <div class="form-row tm-search-form-row">
-                                            <div class="form-group tm-form-element tm-form-element-2">                                            
-                                                <select name="adult" class="form-control tm-select" id="adult">
-                                                    <option value="">Adult</option>
-                                                    <option value="1">1</option>
-                                                    <option value="2">2</option>
-                                                    <option value="3">3</option>
-                                                    <option value="4">4</option>
-                                                    <option value="5">5</option>
-                                                    <option value="6">6</option>
-                                                    <option value="7">7</option>
-                                                    <option value="8">8</option>
-                                                    <option value="9">9</option>
-                                                    <option value="10">10</option>
-                                                </select>
+
+                                            <div class="form-group tm-form-element tm-form-element-2">
+
+                                                <Dropdown v-model="selectedItem" :options="items" optionLabel="label" optionValue="value" :virtualScrollerOptions="{ itemSize: 38 }" placeholder="Adults" class="w-full md:w-14rem" />
+
                                                 <i class="fa fa-2x fa-user tm-form-element-icon"></i>
                                             </div>
                                             <div class="form-group tm-form-element tm-form-element-2">                                            
-                                                <select name="children" class="form-control tm-select" id="children">
-                                                    <option value="">Children</option>
-                                                    <option value="0">0</option>
-                                                    <option value="1">1</option>
-                                                    <option value="2">2</option>
-                                                    <option value="3">3</option>
-                                                    <option value="4">4</option>
-                                                    <option value="5">5</option>
-                                                    <option value="6">6</option>
-                                                    <option value="7">7</option>
-                                                    <option value="8">8</option>
-                                                    <option value="9">9</option>
-                                                    <option value="10">10</option>
-                                                </select>
+                                                <Dropdown v-model="selectedItem2" :options="items2" optionLabel="label" optionValue="value" :virtualScrollerOptions="{ itemSize: 38 }" placeholder="Children" class="w-full md:w-14rem" />
                                                 <i class="fa fa-2x fa-user tm-form-element-icon"></i>
                                             </div>
                                             <div class="form-group tm-form-element tm-form-element-2">
-                                                <select name="room" class="form-control tm-select" id="room">
-                                                    <option value="">Room</option>
-                                                    <option value="1">1</option>
-                                                    <option value="2">2</option>
-                                                    <option value="3">3</option>
-                                                    <option value="4">4</option>
-                                                    <option value="5">5</option>
-                                                    <option value="6">6</option>
-                                                    <option value="7">7</option>
-                                                    <option value="8">8</option>
-                                                    <option value="9">9</option>
-                                                    <option value="10">10</option>
-                                                </select>
+                                                <Dropdown v-model="selectedItem3" :options="items3" optionLabel="label" optionValue="value" :virtualScrollerOptions="{ itemSize: 38 }" placeholder="Rooms" class="w-full md:w-14rem" />
                                                 <i class="fa fa-2x fa-bed tm-form-element-icon"></i>
                                             </div>
                                             <div class="form-group tm-form-element tm-form-element-2">
-                                                <button type="submit" class="btn btn-primary tm-btn-search">Package Availability</button>
+                                                <button type="submit" class="btn btn-primary tm-btn-search">Book Now</button>
                                             </div>
+
                                         </div>
                                         
                                     </form>
@@ -334,68 +269,34 @@ export default {
                                     <form method="get" class="tm-search-form">
                                         <div class="form-row tm-search-form-row">
                                             <div class="form-group tm-form-element tm-form-element-100">
-                                                <i class="fas fa-map-marker-alt fa-2x tm-form-element-icon"></i>
-                                                <input name="departure" type="text" class="form-control" placeholder="Departure From">
+                                                <span class="p-input-icon-left">
+                                                    <i class="fas fa-map-marker-alt fa-2x tm-form-element-icon"></i>
+                                                    <InputText v-model="value4" showIcon iconDisplay="input" placeholder="Destination" />
+                                                </span>
                                             </div>
                                             <div class="form-group tm-form-element tm-form-element-50">
-                                                <i class="fas fa-map-marker-alt fa-2x tm-form-element-icon"></i>
-                                                <input name="destination" type="text" class="form-control" placeholder="Your Destination...">
+                                                <span class="p-input-icon-left">
+                                                    <i class="fas fa-map-marker-alt fa-2x tm-form-element-icon"></i>
+                                                    <InputText v-model="value5" showIcon iconDisplay="input" placeholder="Destination" />
+                                                </span>
                                             </div>
                                             <div class="form-group tm-form-element tm-form-element-50">
-                                                <i class="fas fa-calendar-alt fa-2x tm-form-element-icon"></i>
-                                                <input name="check-out" type="date" class="form-control" placeholder="Check Out">
+                                                <Calendar v-model="icondisplay" showIcon iconDisplay="input" inputId="icondisplay" placeholder="Tour Date"/>
                                             </div>
                                         </div>
                                         <div class="form-row tm-search-form-row">
-                                            <div class="form-group tm-form-element tm-form-element-2">                                            
-                                                <select name="adults" class="form-control tm-select">
-                                                    <option value="">Adults</option>
-                                                    <option value="0">0</option>
-                                                    <option value="1">1</option>
-                                                    <option value="2">2</option>
-                                                    <option value="3">3</option>
-                                                    <option value="4">4</option>
-                                                    <option value="5">5</option>
-                                                    <option value="6">6</option>
-                                                    <option value="7">7</option>
-                                                    <option value="8">8</option>
-                                                    <option value="9">9</option>
-                                                    <option value="10">10</option>
-                                                </select>
+                                            <div class="form-group tm-form-element tm-form-element-2">
+
+                                                <Dropdown v-model="selectedItem" :options="items" optionLabel="label" optionValue="value" :virtualScrollerOptions="{ itemSize: 38 }" placeholder="Adults" class="w-full md:w-14rem" />
+
                                                 <i class="fa fa-2x fa-user tm-form-element-icon"></i>
                                             </div>
                                             <div class="form-group tm-form-element tm-form-element-2">                                            
-                                                <select name="children" class="form-control tm-select">
-                                                    <option value="">Children</option>
-                                                    <option value="0">0</option>
-                                                    <option value="1">1</option>
-                                                    <option value="2">2</option>
-                                                    <option value="3">3</option>
-                                                    <option value="4">4</option>
-                                                    <option value="5">5</option>
-                                                    <option value="6">6</option>
-                                                    <option value="7">7</option>
-                                                    <option value="8">8</option>
-                                                    <option value="9">9</option>
-                                                    <option value="10">10</option>
-                                                </select>
+                                                <Dropdown v-model="selectedItem2" :options="items2" optionLabel="label" optionValue="value" :virtualScrollerOptions="{ itemSize: 38 }" placeholder="Children" class="w-full md:w-14rem" />
                                                 <i class="fa fa-2x fa-user tm-form-element-icon"></i>
                                             </div>
                                             <div class="form-group tm-form-element tm-form-element-2">
-                                                <select name="rooms" class="form-control tm-select">
-                                                    <option value="">Rooms</option>
-                                                    <option value="0">0</option>
-                                                    <option value="1">1</option>
-                                                    <option value="2">2</option>
-                                                    <option value="3">3</option>
-                                                    <option value="4">4</option>
-                                                    <option value="5">5</option>
-                                                    <option value="6">6</option>
-                                                    <option value="7">7</option>
-                                                    <option value="8">8</option>
-                                                    <option value="9">9</option>
-                                                    <option value="10">10</option>
-                                                </select>
+                                                <Dropdown v-model="selectedItem3" :options="items3" optionLabel="label" optionValue="value" :virtualScrollerOptions="{ itemSize: 38 }" placeholder="Rooms" class="w-full md:w-14rem" />
                                                 <i class="fa fa-2x fa-bed tm-form-element-icon"></i>
                                             </div>
                                             <div class="form-group tm-form-element tm-form-element-2">
@@ -427,6 +328,8 @@ export default {
 <style scoped>
 @import url('../../assets/css/tooplate-style.css');
 @import url('../../assets/css/bootstrap.min.css');
+@import url('primevue/resources/themes/lara-light-amber/theme.css');
+
 .checkBox{
     margin: 0;
     padding: 0;
@@ -582,11 +485,46 @@ svg:not(:root).svg-inline--fa {
 input[type="date"]::-webkit-calendar-picker-indicator {
   color: #FFF
 }
+.p-calendar {
+    display: inline-flex;
+    max-width: 100%;
+    width: 100%;
+}
+.p-input-icon-left, .p-input-icon-right {
+    position: relative;
+    width: 100%;
+}
+.p-input-icon-left > .p-inputtext {
+    padding-left: 2.5rem;
+    width: 100%;
+}
+.p-dropdown {
+    display: inline-flex;
+    cursor: pointer;
+    position: relative;
+    user-select: none;
+    width: 100%;
+    padding: 0px 28px;
+}
+.p-dropdown-trigger {
+    background: transparent;
+    color: #6b7280;
+    width: 0rem !important;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
 .package-input{
     width:50% !important;
 }
+.fa-map-marker-alt{
+    top: 20px !important;
+}
 .fa-2x {
     font-size: 1.5em;
+}
+.p-icon {
+    display: inline-block;
+    color: #fd9604;
 }
 .form-control:focus {
     border-color: #fd9604;

@@ -443,28 +443,34 @@ p {
         font-size: 12px;
     }
     #prev{
-        margin-left: 170px;
+        margin-left: 60%;
         margin-top: 10px;
     }
     #next{
-        margin-left: 235px;
+        margin-left: 80%;
         margin-top: -70px;
     }
     .First_svg{
-    margin-top: -85px;
+        margin-top: -65px;
+        height: 200px;
     }
-    .Package-container[data-v-9716b280] {
-    margin-top: -30px;
+
+    .Package-container {
+        margin-top: -85px;
     }
     .card{
         width: 100% !important;
+        min-width: 255px;
         margin: 0px 20px;
+    }
+    .card-text h2{
+        font-size: 18px;
     }
     .Package-card-img{
         width: 100%;
     }
     .btn{
-        margin-right: 25px;
+        margin-top: 10px;
     }
 }
 </style>
