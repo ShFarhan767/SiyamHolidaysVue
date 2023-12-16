@@ -198,7 +198,7 @@ export default {
     height: auto;
 }
 .Package-container{
-    margin-top: -132px;
+    margin-top: -130px;
 }
 .Title{
     color: #fd9604 !important;

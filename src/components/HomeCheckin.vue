@@ -438,7 +438,7 @@ button:focus {
     position: absolute;
     width: 88px !important;
     left: 122px ;
-    top: 90px !important;
+    top: 91px !important;
     z-index: -1;
     height: 2px;
     background-color: #fd9604;
