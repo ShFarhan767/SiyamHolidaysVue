@@ -22,7 +22,7 @@
                                   E-mail: sales@siyamholidays.com
                                 </p>
 
-                                <h3 class="contact" >24<span class=" " style="color: #fd9604;">/</span>7 Con<span class=" " style="color: #fd9604;">T</span>act </h3>
+                                <h3 class="contact" >24<span class=" " style="color: #fd9604;">/</span>7 Contact </h3>
                                 <h5 class="number" style="color: #fd9604;"> 0188 00 78 901 </h5>
                                     <div class="col-md-12 padding" style="margin-top: 10px;margin-bottom: 10px;">
                                         <img src="https://tvlk.imgix.net/imageResource/2017/12/13/1513150313470-072f6bdc02c0b73fcf791aa2b2264fbd.svg?auto=compress%2Cformat&cs=srgb&ixlib=java-1.1.12&q=75" style="width: 80px;">
@@ -122,7 +122,7 @@
     
 </template>
 
-<style>
+<style scoped>
  .footer_area{
     width: 100%;
     padding: 10px;
@@ -143,7 +143,9 @@
  }
  svg:not(:root).svg-inline--fa {
     overflow: visible;
-    color: #0b3ba7;
+    color: #fd9604;
+    font-size: 18px;
+    margin: 0px 5px;
 }
  .heading7{
     color: #fd9604;

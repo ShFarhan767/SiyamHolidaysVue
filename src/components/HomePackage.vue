@@ -39,9 +39,9 @@ export default {
         <div class="overlay"></div>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" class="First_svg"><path fill="#ffffff" fill-opacity="1" d="M0,160L480,96L960,192L1440,64L1440,0L960,0L480,0L0,0Z"></path></svg>
 
-        <div class="container Package-container">
-            <h2 class="Title">Package Tour</h2>
-            <p class="description">Get ready for starting tour</p>
+        <div class="container Package-container" data-zanim-timeline="{}">
+            <h2 class="Title" data-zanim-xs='{"delay":0.1}'>Package Tour</h2>
+            <p class="description" data-zanim-xs='{"delay":0.2}'>Get ready for starting tour</p>
 
             <button id="prev" class="btn" @click="handleScrollPrev">
                     <i class="las la-angle-left"></i>
@@ -173,7 +173,7 @@ export default {
 
 </template>
 
-<style  scoped>
+<style scoped>
 .Package{
     padding-bottom: 0px;
 }
