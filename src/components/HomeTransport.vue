@@ -209,7 +209,7 @@ export default {
     color: #0b3ba7;
 }
 .fa-map-marker-alt{
-    color: #fd9604;
+    color: #0b3ba7;
 }
 
 .card .card-text {
@@ -246,7 +246,7 @@ p {
     box-shadow: 0px 17px 35px 0px rgba(0,0,0,.1);
 }
 .fa-tag{
-    color: #fd9604;
+    color: #0b3ba7;
 }
 .btn-outline-primary{
     width: 110px;
