@@ -234,13 +234,13 @@ export default {
   color: #fd9604;
 }
 
-.card i {
+/* .card i {
   position:absolute;
   right: 0;
   top: 0;
   font-size:1.2rem;
   line-height:3.2rem;
-}
+} */
 .fa-user{
     color: #fd9604;
 }
@@ -277,7 +277,7 @@ p {
     box-shadow: 0px 17px 35px 0px rgba(0,0,0,.1);
 }
 .fa-tag{
-    color: #fd9604;
+    color: #0b3ba7;
 }
 .btn-outline-primary{
     width: 110px;
