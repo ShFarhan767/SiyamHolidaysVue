@@ -198,7 +198,7 @@
     border-radius: 30px;
     position: relative;
     z-index: 10;
-    margin: 12px;
+    margin: 15px;
     min-height: 356px;
     cursor: pointer;
     float: left;

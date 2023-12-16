@@ -36,8 +36,8 @@
                         </li>
                         <li class="nav-item dropdown"><a class="nav-link dropdown-toggle dropdown-indicator" href="JavaScript:void(0)" role="button" data-bs-toggle="dropdown" aria-expanded="false">News</a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="news/newsroom.html">Newsroom</a></li>
-                                <li><a class="dropdown-item" href="news/news.html">Single News</a></li>
+                                <li><a class="dropdown-item" href="#">Newsroom</a></li>
+                                <li><a class="dropdown-item" href="#">Single News</a></li>
                             </ul>
                         </li>
                         <li class="nav-item dropdown"><a class="nav-link dropdown-toggle dropdown-indicator" href="JavaScript:void(0)" role="button" data-bs-toggle="dropdown" aria-expanded="false">Elements</a>

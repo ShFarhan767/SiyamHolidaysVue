@@ -358,16 +358,16 @@ const items3 = ref(Array.from({ length: 10 }, (_, i) => ({ label: `${i}`, value:
     z-index: 999;
 }
 .tab_box{
-    width: 117%;
+    width: 135%;
     overflow: hidden !important;
     margin-top: 25px;
-    margin-left: -94px !important;
+    margin-left: -16% !important;
     display: flex;
     justify-content: space-around;
     align-items: center;
     border-bottom: 1px solid #5d616c !important;
     z-index: -20;
-    position: relative;
+    position: relative; 
 }
 .button{
     width: 100%;

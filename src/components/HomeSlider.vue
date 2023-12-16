@@ -8,7 +8,7 @@
         <div class="swiper theme-slider min-vh-100" data-swiper='{"loop":true,"allowTouchMove":false,"autoplay":{"delay":5000},"effect":"fade","speed":800}'>
             <div class="swiper-wrapper">
                 <div class="swiper-slide" data-zanim-timeline="{}">
-                    <div class="bg-holder" style="background-image:url(../../assets/img/header-6.jpg);"></div>
+                    <div class="bg-holder" style="background-image:url(../../assets/img/header-1.jpg);"></div>
                     <!--/.bg-holder-->
                     <div class="container">
                         <div class="row min-vh-100 py-8 align-items-center" data-inertia='{"weight":1.5}'>
@@ -27,7 +27,7 @@
                     </div>
                 </div>
                 <div class="swiper-slide" data-zanim-timeline="{}">
-                    <div class="bg-holder" style="background-image:url(../../assets/img/header-5.jpg);"></div>
+                    <div class="bg-holder" style="background-image:url(../../assets/img/header-6.jpg);"></div>
                     <!--/.bg-holder-->
                     <div class="container">
                         <div class="row min-vh-100 py-8 align-items-center" data-inertia='{"weight":1.5}'>
@@ -46,7 +46,7 @@
                     </div>
                 </div>
                 <div class="swiper-slide" data-zanim-timeline="{}">
-                    <div class="bg-holder" style="background-image:url(../../assets/img/header-1.jpg);"></div>
+                    <div class="bg-holder" style="background-image:url(../../assets/img/header-5.jpg);"></div>
                     <!--/.bg-holder-->
                     <div class="container">
                         <div class="row min-vh-100 py-8 align-items-center" data-inertia='{"weight":1.5}'>

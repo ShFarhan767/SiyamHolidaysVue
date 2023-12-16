@@ -198,7 +198,7 @@ export default {
     height: auto;
 }
 .Package-container{
-    margin-top: -130px;
+    margin-top: -132px;
 }
 .Title{
     color: #fd9604 !important;
@@ -257,7 +257,7 @@ export default {
     border-top: none;
 }
 .card-text span{
-    font-size: 12px;
+    font-size: 12px; 
     color: #999999;
 }
 .location{
