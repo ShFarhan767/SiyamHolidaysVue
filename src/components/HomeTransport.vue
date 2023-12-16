@@ -206,12 +206,7 @@ export default {
 }
 
 .card i {
-  position:absolute;
-  right: 0;
-  top: 0;
-  padding: 15px;
-  font-size:1.4rem;
-  line-height:3.2rem;
+    color: #0b3ba7;
 }
 .fa-map-marker-alt{
     color: #fd9604;
