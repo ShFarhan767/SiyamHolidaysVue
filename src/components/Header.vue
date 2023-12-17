@@ -23,38 +23,20 @@
                         <li class="nav-item">
                             <RouterLink  class="nav-link" to="/" role="button">Home</RouterLink>
                         </li>
-                        <li class="nav-item dropdown"><a class="nav-link dropdown-toggle dropdown-indicator" href="JavaScript:void(0)" role="button" data-bs-toggle="dropdown" aria-expanded="false">Pages</a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="pages/service.html">Services</a></li>
-                                <li><a class="dropdown-item" href="pages/about.html">About</a></li>
-                                <li><a class="dropdown-item" href="pages/alumni.html">Alumni</a></li>
-                                <li><a class="dropdown-item" href="pages/blank.html">Blank Page</a></li>
-                                <li><a class="dropdown-item" href="pages/404.html">404 Page</a></li>
-                                <li><a class="dropdown-item" href="pages/login.html">Login</a></li>
-                                <li><a class="dropdown-item" href="pages/registration.html">Registration</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item dropdown"><a class="nav-link dropdown-toggle dropdown-indicator" href="JavaScript:void(0)" role="button" data-bs-toggle="dropdown" aria-expanded="false">News</a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Newsroom</a></li>
-                                <li><a class="dropdown-item" href="#">Single News</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item dropdown"><a class="nav-link dropdown-toggle dropdown-indicator" href="JavaScript:void(0)" role="button" data-bs-toggle="dropdown" aria-expanded="false">Elements</a>
-                            <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="elements/buttons.html">Buttons</a></li>
-                            <li><a class="dropdown-item" href="elements/colors.html">Colors</a></li>
-                            <li><a class="dropdown-item" href="elements/googlemap.html">Google Map</a></li>
-                            <li><a class="dropdown-item" href="elements/grid.html">Grid</a></li>
-                            <li><a class="dropdown-item" href="elements/icons.html">Icons</a></li>
-                            <li><a class="dropdown-item" href="elements/layouthelpers.html">Layout Helpers</a></li>
-                            <li><a class="dropdown-item" href="elements/modal-video.html">Modal Video</a></li>
-                            <li><a class="dropdown-item" href="elements/swiper.html">Swiper</a></li>
-                            <li><a class="dropdown-item" href="elements/typography.html">Typography</a></li>
-                            </ul>
+                        <li class="nav-item dropdown">
+                            <RouterLink  class="nav-link" to="/hotel" role="button">Hotel</RouterLink>
                         </li>
                         <li class="nav-item dropdown">
-                            <RouterLink  class="nav-link" to="/about" role="button">Contact</RouterLink>
+                            <RouterLink  class="nav-link" to="/" role="button">Package Tour</RouterLink>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <RouterLink  class="nav-link" to="/" role="button">Transportation</RouterLink>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <RouterLink  class="nav-link" to="/" role="button">Sightseeing</RouterLink>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <RouterLink  class="nav-link" to="/" role="button">Visa</RouterLink>
                         </li>
                     </ul><a class="btn btn-outline-primary rounded-pill btn-sm border-2 d-block d-lg-inline-block ms-auto my-3 my-lg-0" href="https://themewagon.com/themes/elixir/" target="_blank">Purchase</a>
                 </div>
