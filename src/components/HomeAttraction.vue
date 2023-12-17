@@ -278,7 +278,7 @@ p {
 svg:not(:root).svg-inline--fa {
     overflow: visible;
     color: #0b3ba7;
-}
+} 
 .btn-outline-primary{
     width: 110px;
     padding: 10px;
