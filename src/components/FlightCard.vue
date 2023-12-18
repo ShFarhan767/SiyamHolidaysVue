@@ -1,16 +1,9 @@
-<script>
-
-</script>
+<script setup></script>
 
 <template>
-
-    <section class="Flight">
-        <div class="container ">
-            <h3>Featured Flight</h3>
-            <p><i class="fas fa-fighter-jet"></i></p>
-
-            <div class="slider">
-
+    <div class="container Flight-Card">
+        <div class="row">
+            <h2>Feature Flight</h2>
                 <div class="card-content">
                     <!-- Card -->
                     <div class="card">
@@ -123,72 +116,24 @@
                         
                 </div>
 
-            </div>
-
         </div>
-
-    </section>
-
+    </div>
 </template>
 
 <style scoped>
-.Flight{
-    width: 100%;
-    height: auto;
-    background: url(https://www.designbolts.com/wp-content/uploads/2021/01/rainy-clouds-with-blue-sky-wallpaper-1.jpg) no-repeat;
-    background-size: cover;
-    padding-top: 0;
-    padding-bottom: 15px;
-    padding-left: 0px;
-    margin-left: 0px;
-    overflow: hidden !important;
+.Flight-Card{
+    margin-top: 100px;
 }
-.Flight h3{
-    font-family: 'Fira Sans', sans-serif;
+.Flight-Card h2{
     text-align: center;
-    color: #fff;
-    font-size: 36px;
-    letter-spacing: 1px;
-    margin-top: 35px;
+    font-family: 'Fira Sans', sans-serif;
+    color: #fd9604;
+    letter-spacing: 0.5px;
+    font-size: 48px;
+    padding: 15px;
 }
-.Flight p{
-    font-size: 18px;
-    color: #fff;
-    position: relative;
-    display: inline-block;
-    margin-left: 50%;
-}
-.fa-fighter-jet{
-    transform: rotateZ(-46deg);
-}
-.Flight p::before,
-.Flight p::after {
-  content: '';
-  position: absolute;
-  top: 50%;
-  width: 50px; 
-  height: 1px; 
-  background-color: #fff; 
-}
-.Flight p::before {
-  left: -60px;
-}
-.Flight p::after {
-  right: -60px; 
-}
-.slider {
-    display: block;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: auto;
-    padding-bottom: 15px;
-    overflow: hidden;
-    margin-top: 35px !important;
-}
-.CardSlider{
-    padding-top: 4.5rem;
-    overflow: hidden !important;
+.card-content{
+    margin-top: 50px;
 }
 .card {
     width: 250px;
@@ -204,7 +149,7 @@
     float: left;
     transition: all .25s ease;
     border: none;
-    box-shadow: 0px 0px 0px 0px rgba(0,0,0, .08);
+    box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.3);
 }
 .card:hover {
   transform:translate(0, -10px);
@@ -237,6 +182,7 @@
     color: #fff;
     padding: 5px;
     margin-top: 30px !important;
+    margin-left: -15px;
 }
 .card-text h6{
     font-family: 'Open Sans', sans-serif;
@@ -245,9 +191,11 @@
     font-weight: 300;
     color: #fff;
     padding: 5px;
+    margin-left: -15px;
 }
 .card-text ul{
     margin-top: 35px;
+    margin-left: -25px;
 }
 .card-text ul li{
     font-family: 'Open Sans', sans-serif;

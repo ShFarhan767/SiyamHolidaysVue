@@ -1,5 +1,6 @@
 <script setup>
 import FlightCheckBox from './FlightCheckBox.vue';
+import FlightCard from './FlightCard.vue';
 </script>
 
 <template>
@@ -25,6 +26,7 @@ import FlightCheckBox from './FlightCheckBox.vue';
 
 
         <FlightCheckBox />
+        <FlightCard />
 
     </section>
 </template>
