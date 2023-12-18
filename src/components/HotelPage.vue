@@ -27,6 +27,53 @@ const childrenItems = ref(Array.from({ length: 10 }, (_, i) => ({ label: `${i + 
 
 const roomItemHotel = ref();
 const roomItems = ref(Array.from({ length: 10 }, (_, i) => ({ label: `${i + 1} Rooms`, value: i + 1 })));
+
+//-- Hotel Card --//
+const cardItems = [
+  {
+    rating: 4.8,
+    image: '../../assets/img/Travel/Hotel/Card-1.jpeg',
+    title: 'Aksari Resort',
+    description: 'I show you how to make a card group easily and very functional with the use of flexbox and its magic and JavaScript.',
+    link: '#'
+  },
+  {
+    rating: 4.9,
+    image: '../../assets/img/Travel/Hotel/Card-2.jpeg',
+    title: 'Jumeirah Al Qasr',
+    description: 'I show you how to make a card group easily and very functional with the use of flexbox and its magic and JavaScript.',
+    link: '#'
+  },
+  {
+    rating: 4.6,
+    image: '../../assets/img/Travel/Hotel/Card-3.jpeg',
+    title: 'Hotel Casa Turquesa',
+    description: 'I show you how to make a card group easily and very functional with the use of flexbox and its magic and JavaScript.',
+    link: '#'
+  },
+  {
+    rating: 4.5,
+    image: '../../assets/img/Travel/Hotel/Card-4.jpeg',
+    title: 'Soneva Fushi',
+    description: 'I show you how to make a card group easily and very functional with the use of flexbox and its magic and JavaScript.',
+    link: '#'
+  },
+  {
+    rating: 4.5,
+    image: '../../assets/img/Travel/Hotel/Card-5.jpeg',
+    title: 'La Réserve Paris',
+    description: 'I show you how to make a card group easily and very functional with the use of flexbox and its magic and JavaScript.',
+    link: '#'
+  },
+  {
+    rating: 4.5,
+    image: '../../assets/img/Travel/Hotel/Card-6.jpeg',
+    title: 'Marina Bay Sands',
+    description: 'I show you how to make a card group easily and very functional with the use of flexbox and its magic and JavaScript.',
+    link: '#'
+  },
+];
+//-- Hotel Card --//
 </script>
 
 <template>
@@ -113,6 +160,31 @@ const roomItems = ref(Array.from({ length: 10 }, (_, i) => ({ label: `${i + 1} R
 
             </div>
         </div>
+
+        <div class="container Hotel_Card">
+            <div class="row">
+
+                <h1>Featured Hotels</h1>
+
+                <div v-for="(items , index) in cardItems" :key="index" class="col-md-4">
+
+                    <div class="card">
+                        <h4>{{ items.rating }}</h4>
+                        <i class="lar la-heart"></i>
+                        <div class="card-img">
+                            <img :src="items.image" alt="">
+                        </div>
+                        <div class="card-text">
+                            <h2>{{ items.title }}</h2>
+                            <p>{{ items.description }}</p>
+                            <a class="btn btn-outline-primary rounded-pill btn-sm border-2 d-block d-lg-inline-block ms-auto my-3 my-lg-0" :href="items.link" target="_blank">Book Now</a>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
     </section>
 </template>
 
@@ -129,7 +201,7 @@ const roomItems = ref(Array.from({ length: 10 }, (_, i) => ({ label: `${i + 1} R
 .Hotel_Background img{
     width: 64%;
     height: 505px;
-    top: 5%;
+    top: 55px;
     right: 10%;
     position: absolute;
 }
@@ -216,4 +288,86 @@ input{
     margin-top: 30px;
     color: #2A3855;
 }
+/* Hotel_Card */
+.Hotel_Card{
+    margin-top: 100px;
+}
+.Hotel_Card h1{
+    text-align: center;
+    font-family: 'Fira Sans', sans-serif;
+    color: #fd9604;
+    letter-spacing: 0.5px;
+    font-size: 48px;
+    padding: 15px;
+}
+
+.card {
+  width: 300px;
+  min-width: 300px;
+  height:auto;
+  background:#fff;
+  border-radius:30px;
+  position:relative;
+  z-index:10;
+  margin:25px;
+  min-height:356px;
+  cursor:pointer;
+  transition: all .25s ease;
+  border: none;
+  box-shadow: 0px 0px 0px 0px rgba(0,0,0, .08);
+}
+
+.card:hover {
+  transform:translate(0, -10px);
+  box-shadow: 0px 17px 35px 0px rgba(0,0,0,.07);
+}
+.card:hover i{
+  color: #fd9604;
+}
+.card img {
+    width: 100%;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    height: 200px;
+
+}
+.card h4 {
+  position:absolute;
+  left: 0;
+  top: 0;
+  padding: 15px;
+  color: #fd9604;
+}
+
+.card i {
+  position:absolute;
+  right: 0;
+  top: 0;
+  padding: 15px;
+  font-size:1.4rem;
+  line-height:3.2rem;
+  transition: 0.6s all;
+}
+
+.card .card-text {
+    box-shadow: 0px 17px 35px 0px rgba(0,0,0,.07);
+    padding: 20px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+.card-text h2{
+    color: #0b3ba7;
+    font-size: 24px;
+    font-family: 'Fira Sans', sans-serif;
+    letter-spacing: 1px;
+}
+.card p {
+    font-size: 14px;
+    line-height: 1.8;
+    opacity: .6;
+    margin-top: 10px;
+    color: #2A3855;
+}
+/* Hotel_Card */
 </style>

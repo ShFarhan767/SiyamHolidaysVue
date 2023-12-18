@@ -27,13 +27,13 @@
                             <RouterLink  class="nav-link" to="/hotel" role="button">Hotel</RouterLink>
                         </li>
                         <li class="nav-item dropdown">
-                            <RouterLink  class="nav-link" to="/" role="button">Package Tour</RouterLink>
+                            <RouterLink  class="nav-link" to="/package-tour" role="button">Package Tour</RouterLink>
                         </li>
                         <li class="nav-item dropdown">
                             <RouterLink  class="nav-link" to="/" role="button">Transportation</RouterLink>
                         </li>
                         <li class="nav-item dropdown">
-                            <RouterLink  class="nav-link" to="/" role="button">Sightseeing</RouterLink>
+                            <RouterLink  class="nav-link" to="/activites" role="button">Sightseeing</RouterLink>
                         </li>
                         <li class="nav-item dropdown">
                             <RouterLink  class="nav-link" to="/" role="button">Visa</RouterLink>
