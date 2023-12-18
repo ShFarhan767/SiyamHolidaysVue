@@ -1,5 +1,6 @@
 <script setup>
 import SightCheckBox from './SightCheckBox.vue';
+import SightSeeingCard from './SightSeeingCard.vue';
 </script>
 
 <template>
@@ -25,6 +26,7 @@ import SightCheckBox from './SightCheckBox.vue';
 
 
         <SightCheckBox /> 
+        <SightSeeingCard /> 
 
     </section>
 </template>
