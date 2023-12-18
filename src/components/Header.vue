@@ -23,19 +23,23 @@
                         <li class="nav-item">
                             <RouterLink  class="nav-link" to="/" role="button">Home</RouterLink>
                         </li>
-                        <li class="nav-item dropdown">
+                        <li class="nav-item">
                             <RouterLink  class="nav-link" to="/hotel" role="button">Hotel</RouterLink>
                         </li>
-                        <li class="nav-item dropdown">
+                        <li class="nav-item">
                             <RouterLink  class="nav-link" to="/package-tour" role="button">Package Tour</RouterLink>
                         </li>
                         <li class="nav-item dropdown">
-                            <RouterLink  class="nav-link" to="/" role="button">Transportation</RouterLink>
+                            <a class="nav-link dropdown-toggle dropdown-indicator" href="JavaScript:void(0)" role="button" data-bs-toggle="dropdown" aria-expanded="false">Transportation</a>
+                            <ul class="dropdown-menu">
+                                <li><RouterLink  class="dropdown-item" to="/flight" role="button">Flight</RouterLink></li>
+                                <li><a class="dropdown-item" href="news/news.html">By Road</a></li>
+                            </ul>
                         </li>
-                        <li class="nav-item dropdown">
+                        <li class="nav-item">
                             <RouterLink  class="nav-link" to="/activites" role="button">Sightseeing</RouterLink>
                         </li>
-                        <li class="nav-item dropdown">
+                        <li class="nav-item">
                             <RouterLink  class="nav-link" to="/" role="button">Visa</RouterLink>
                         </li>
                     </ul><a class="btn btn-outline-primary rounded-pill btn-sm border-2 d-block d-lg-inline-block ms-auto my-3 my-lg-0" href="https://themewagon.com/themes/elixir/" target="_blank">Purchase</a>
@@ -47,6 +51,9 @@
 </template>
 
 <style scoped>
+.dropdown:hover.dropdown-menu {
+    display: block;
+}
 
 .btn-outline-primary:active{
     background: none !important;

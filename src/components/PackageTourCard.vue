@@ -117,6 +117,7 @@ const travelPackages = [
 
 .card:hover {
   transform:translate(0, -10px);
+  box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.2);
 }
 
 .card img {

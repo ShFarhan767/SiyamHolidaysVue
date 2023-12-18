@@ -23,6 +23,11 @@ const router = createRouter({
       path: '/activites',
       name: 'activites',
       component: () => import('../views/SightSeeingView.vue')
+    },
+    {
+      path: '/flight',
+      name: 'flight',
+      component: () => import('../views/FlightView.vue')
     }
   ]
 })
