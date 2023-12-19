@@ -157,7 +157,7 @@ const arrivalItems = ref(Array.from({ length: 10 }, (_, i) => ({ label: `${i + 1
 
                 <!-- Step 2 Start -->
 
-                <div class="content active tm-bg-white ie-container-width-fix-2">
+                <div class="content tm-bg-white ie-container-width-fix-2">
                     <div class="container ie-h-align-center-fix">
                         <div class="row">
                             
