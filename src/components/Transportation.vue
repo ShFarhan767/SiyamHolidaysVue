@@ -1,17 +1,16 @@
 <script setup>
-import FlightCheckBox from './FlightCheckBox.vue';
-import FlightCard from './FlightCard.vue';
+import TransportationCheckbox from './TransportationCheckbox.vue';
 </script>
 
 <template>
-    <section class="Flight">
-        <div class="Flight_Heading">
+    <section class="Transportation">
+        <div class="Transportation_Heading">
             <div class="container">
                 <div class="row">
                     
                     <div class="col-md-8 Overlay">
                         <div class="Heading_Text">
-                            <h2>Find the best airline tickets deals</h2>
+                            <h2>Our Best Package Tour's</h2>
                             <p>Discover the world & enjoy <br>  your tour with luxury. </p>
                         </div>
                     </div>
@@ -19,29 +18,27 @@ import FlightCard from './FlightCard.vue';
                 </div>
             </div>
 
-            <div class="Flight_Background">
-                <img src="../../assets/img/Travel/Flight/Flight-Bg.jpeg" alt="">
+            <div class="Transportation_Background">
+                <img src="../../assets/img/Travel/Transportation/Transportation-Bg.jpeg" alt="">
             </div>
         </div>
 
-
-        <FlightCheckBox />
-        <FlightCard />
+        <TransportationCheckbox />
 
     </section>
 </template>
 
 <style scoped>
-.Flight{
+.Transportation{
     padding-top: 3.5rem;
     overflow: hidden;
 }
-.Flight_Heading{
+.Transportation_Heading{
     width: 100%;
     height: 500px;
-    background-color: #365478;
+    background-color: #543d2d;
 }
-.Flight_Background img{
+.Transportation_Background img{
     width: 64%;
     height: 505px;
     top: 55px;
@@ -65,9 +62,9 @@ import FlightCard from './FlightCard.vue';
     font-size: 18px;
 }
 @media screen and (max-width: 768px) {
-    .Flight_Heading{
+    .Transportation_Heading{
         height: auto;
-        padding-bottom: 115px;
+        padding-bottom: 55px;
     }
     .Heading_Text h2 {
         font-size: 35px;
@@ -77,9 +74,9 @@ import FlightCard from './FlightCard.vue';
         font-size: 14px;
     }
 
-    .Flight_Background img {
+    .Transportation_Background img {
         width: 100%;
-        height: 310px;
+        height: auto;
         top: 0;
         right: 0;
     }

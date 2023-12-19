@@ -114,15 +114,15 @@ const destinations = [
 }
 
 .card__content h3 {
-    font-size: 24px;
-    color: #0b3ba7;
+  font-size: 24px;
+  color: #0b3ba7;
 }
 
 .card__content p {
-    margin-bottom: 1rem;
-    font-size: .9rem;
-    line-height: 1.5rem;
-    color: #94a3b8;
+  margin-bottom: 1rem;
+  font-size: .9rem;
+  line-height: 1.5rem;
+  color: #94a3b8;
 }
 
 .card h4 {
@@ -134,66 +134,73 @@ const destinations = [
 }
 
 .card i {
-    color: #0b3ba7;
+  color: #0b3ba7;
 }
 .fa-user{
-    color: #0b3ba7;
+  color: #0b3ba7;
 }
 
 .card .card-text {
-    padding: 15px;
+  padding: 15px;
 }
 
 .card-text h2{
-    color: #0b3ba7;
-    font-size: 20px;
-    font-family: 'Fira Sans', sans-serif;
-    letter-spacing: 1px;
-    margin-top: 10px;
+  color: #0b3ba7;
+  font-size: 20px;
+  font-family: 'Fira Sans', sans-serif;
+  letter-spacing: 1px;
+  margin-top: 10px;
 }
 p {
-    font-size: 15px;
-    font-weight: 600;
-    margin-top: 10px;
-    color: #676060;
+  font-size: 15px;
+  font-weight: 600;
+  margin-top: 10px;
+  color: #676060;
 }
 .price{
-    margin-top: 5px;
-    font-size: 15px;
-    font-family: 'Open Sans', sans-serif;
+  margin-top: 5px;
+  font-size: 15px;
+  font-family: 'Open Sans', sans-serif;
 }
 .price span{
-    padding: 5px 15px;
-    border-radius: 25px;
-    font-size: 15px;
-    margin-left: 145px;
-    font-family: 'Open Sans', sans-serif;
-    color: #0b3ba7;
-    box-shadow: 0px 17px 35px 0px rgba(0,0,0,.1);
+  padding: 5px 15px;
+  border-radius: 25px;
+  font-size: 15px;
+  margin-left: 145px;
+  font-family: 'Open Sans', sans-serif;
+  color: #0b3ba7;
+  box-shadow: 0px 17px 35px 0px rgba(0,0,0,.1);
 }
 .fa-tag{
-    color: #0b3ba7;
+  color: #0b3ba7;
 }
 svg:not(:root).svg-inline--fa {
-    overflow: visible;
-    color: #0b3ba7;
+  overflow: visible;
+  color: #0b3ba7;
 } 
 .btn-outline-primary{
-    width: 110px;
-    padding: 10px;
-    height: 36px !important;
-    background: transparent !important;
-    color: #000 !important;
-    border: 1px solid #0b3ba7 !important;
-    margin-top: 15px !important;
+  width: 110px;
+  padding: 10px;
+  height: 36px !important;
+  background: transparent !important;
+  color: #000 !important;
+  border: 1px solid #0b3ba7 !important;
+  margin-top: 15px !important;
 }
 .btn-outline-primary:hover{
-    background: #0b3ba7 !important;
-    color: #fff !important;
+  background: #0b3ba7 !important;
+  color: #fff !important;
 }
 .card img {
-    width: 100%;
-    height: 200px;
+  width: 100%;
+  height: 200px;
 }
-
+@media screen and (max-width: 768px) {
+  .Sightseeing_Card h1{
+    font-size: 38px;
+  }
+  .card{
+    margin: 10px;
+  }
+}
 </style>

@@ -100,6 +100,8 @@ const roomItems = ref(Array.from({ length: 10 }, (_, i) => ({ label: `${i + 1} R
     display: flex;
     justify-content: center;
     align-items: center;
+    height: auto;
+    padding-bottom: 20px;
 }
 .First-Section h4{
     font-family: 'Josefin Sans', sans-serif;
@@ -157,5 +159,19 @@ button:focus {
     background: none;
     border: 1px solid #fd9604;
     color: #fd9604;
+}
+@media screen and (max-width: 768px) {
+    .SightSeeing_Box h3 , .First-Section h4 , .Second-Section h4{
+        font-size: 18px !important;
+    }
+    .First-Section p , .Second-Section p {
+        font-size: 15px;
+    }
+    .btn-primary{
+        font-size: 14px;
+        padding: 10px;
+        border-radius: 5px;
+        height: auto;
+    }
 }
 </style>

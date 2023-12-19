@@ -64,4 +64,24 @@ import SightSeeingCard from './SightSeeingCard.vue';
     color: #fff;
     font-size: 18px;
 }
+@media screen and (max-width: 768px) {
+    .SightSeeing_Heading{
+        height: auto;
+        padding-bottom: 55px;
+    }
+    .Heading_Text h2 {
+        font-size: 35px;
+    }
+
+    .Heading_Text p {
+        font-size: 14px;
+    }
+
+    .SightSeeing_Background img {
+        width: 100%;
+        height: auto;
+        top: 0;
+        right: 0;
+    }
+}
 </style>

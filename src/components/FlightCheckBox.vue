@@ -131,6 +131,8 @@ const classItems = ref(Array.from({ length: 10 }, (_, i) => ({ label: `${i + 1} 
 }
 .Second-Section{
     background: #fff;
+    height: auto;
+    padding-bottom: 20px;
 }
 .First-Section h4{
     font-family: 'Josefin Sans', sans-serif;
@@ -152,10 +154,10 @@ const classItems = ref(Array.from({ length: 10 }, (_, i) => ({ label: `${i + 1} 
   content: "";
   position: absolute;
   top: 50%;
-  right: 10px; /* Adjust the right offset as needed */
+  right: 10px; 
   transform: translateY(-50%);
   border: 5px solid transparent;
-  border-top: 5px solid #000; /* Adjust the color as needed */
+  border-top: 5px solid #000; 
 }
 .p-input-icon-left, .p-input-icon-right {
     position: relative;
@@ -173,5 +175,20 @@ input{
 .rooms{
     margin-top: 30px;
     color: #2A3855;
+}
+@media screen and (max-width: 768px) {
+    .Flight_Box h3 , .First-Section h4 , .Second-Section h4{
+        font-size: 18px !important;
+    }
+    .First-Section p , .Second-Section p {
+        font-size: 15px;
+        margin-top: 15px;
+    }
+    .btn-primary{
+        font-size: 14px;
+        padding: 10px;
+        border-radius: 5px;
+        height: auto;
+    }
 }
 </style>

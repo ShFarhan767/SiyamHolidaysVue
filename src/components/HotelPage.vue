@@ -151,7 +151,7 @@ const cardItems = [
                         <div class="col-md-12">
                             <h4>Serach Room</h4>
                             <div class="col-md-12">
-                                <p>Rooms</p>
+                                <!-- <p>Rooms</p> -->
                             <Dropdown v-model="roomItemHotel" :options="roomItems" optionLabel="label" optionValue="value" :virtualScrollerOptions="{ itemSize: 38 }" placeholder="Rooms" class="w-full md:w-14rem" />
                             </div>
                         </div>
@@ -193,22 +193,26 @@ const cardItems = [
     padding-top: 3.5rem;
     overflow: hidden;
 }
-.Hotel_Heading{
+.Hotel_Heading {
     width: 100%;
     height: 500px;
     background-color: #391F14;
+    position: relative;
 }
-.Hotel_Background img{
+
+.Hotel_Background img {
     width: 64%;
     height: 505px;
-    top: 55px;
+    top: 0px;
     right: 10%;
     position: absolute;
 }
-.Overlay{
+
+.Overlay {
     z-index: 1;
 }
-.Heading_Text h2{
+
+.Heading_Text h2 {
     color: #fff;
     font-family: 'Fira Sans', sans-serif;
     font-size: 70px;
@@ -216,7 +220,8 @@ const cardItems = [
     line-height: 1.3;
     margin-top: 15%;
 }
-.Heading_Text p{
+
+.Heading_Text p {
     font-family: 'Josefin Sans', sans-serif;
     color: #fff;
     font-size: 18px;
@@ -245,6 +250,8 @@ const cardItems = [
 }
 .Second-Section{
     background: #fff;
+    height: auto;
+    padding-bottom: 20px;
 }
 .First-Section h4{
     font-family: 'Josefin Sans', sans-serif;
@@ -370,4 +377,37 @@ input{
     color: #2A3855;
 }
 /* Hotel_Card */
+@media screen and (max-width: 768px) {
+    .Hotel_Heading{
+        height: auto;
+        padding-bottom: 115px;
+    }
+    .Heading_Text h2 {
+        font-size: 35px;
+    }
+
+    .Heading_Text p {
+        font-size: 14px;
+    }
+
+    .Hotel_Background img {
+        width: 100%;
+        height: auto;
+        top: 0;
+        right: 0;
+    }
+    .Hotel_Box h3 , .First-Section h4 , .Second-Section h4{
+        font-size: 18px !important;
+    }
+    .First-Section p{
+        margin-top: 15px;
+    }
+    .p-dropdown {
+        margin-top: 15px;
+    }
+    .Hotel_Card h1{
+        font-size: 38px;
+    }
+}
 </style>
+

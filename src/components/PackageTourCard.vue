@@ -240,4 +240,12 @@ p {
     border: 1px solid #0b3ba7;
     color: #0b3ba7;
 }
+@media screen and (max-width: 768px) {
+    .Package_Card h1{
+        font-size: 38px;
+    }
+    .card{
+        margin: 10px;
+    }
+}
 </style>

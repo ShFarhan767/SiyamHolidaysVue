@@ -298,4 +298,12 @@
     border-bottom-left-radius: 25px;
     border-bottom-right-radius: 25px;
 }
+@media screen and (max-width: 768px) {
+  .Flight-Card h2{
+    font-size: 38px;
+  }
+  .card{
+    margin: 45px;
+  }
+}
 </style>
