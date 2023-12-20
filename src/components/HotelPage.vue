@@ -408,6 +408,7 @@ input{
     .Hotel_Card h1{
         font-size: 38px;
     }
+    
 }
 </style>
 

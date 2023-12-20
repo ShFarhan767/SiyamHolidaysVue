@@ -173,11 +173,16 @@ p {
     height: 200px;
 }
 @media only screen and (max-width: 768px) {
+  .Transport_Card{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
   .Transport_Card h1{
     font-size: 28px;
   }
-  .card{
+  /* .card{
     margin: 10px;
-  }
+  } */
 }
 </style>

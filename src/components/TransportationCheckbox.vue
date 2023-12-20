@@ -269,11 +269,11 @@ const nationalities = ref([
                                 </div>
 
                                 <div class="row">
-                                    <div class="col-md-6">
+                                    <div class="col-md-6 Step-2-Button">
                                         <button type="submit" class="btn btn-primary tm-btn-search" @click="prevTab">Previous</button>
                                     </div>
 
-                                    <div class="col-md-6">
+                                    <div class="col-md-6 Step-2-Button">
                                         <button type="submit" class="btn btn-primary tm-btn-search" @click="nextTab">Next</button>
                                     </div>
                                 </div>
@@ -418,11 +418,11 @@ const nationalities = ref([
                                 </div>
 
                                 <div class="row">
-                                    <div class="col-md-6">
+                                    <div class="col-md-6 Step-3-Button">
                                         <button type="submit" class="btn btn-primary tm-btn-search" @click="prevTab"> Previous</button>
                                     </div>
 
-                                    <div class="col-md-6">
+                                    <div class="col-md-6 Step-3-Button">
                                         <button type="submit" class="btn btn-primary tm-btn-search" @click="nextTab"> Next</button>
                                     </div>
                                 </div>
@@ -441,7 +441,7 @@ const nationalities = ref([
                     <div class="container ie-h-align-center-fix">
                         <div class="row">
                             
-                            <div class="col-md-4 First-Section">
+                            <div class="col-md-4 First-Section Table">
 
                                 <table>
                                     <tr>
@@ -509,7 +509,7 @@ const nationalities = ref([
 
                             <div class="col-md-8 Second-Section">
 
-                                <div class="row">
+                                <div class="row ">
 
                                     <h2>Price Details</h2>
                                     <div class="col-md-12">
@@ -540,11 +540,11 @@ const nationalities = ref([
                                 </div>
 
                                 <div class="row">
-                                    <div class="col-md-6">
+                                    <div class="col-md-6 Step-4-Button">
                                         <button type="submit" class="btn btn-primary tm-btn-search" @click="prevTab">Previous</button>
                                     </div>
 
-                                    <div class="col-md-6">
+                                    <div class="col-md-6 Step-4-Button">
                                         <button type="submit" class="btn btn-primary tm-btn-search">Next</button>
                                     </div>
                                 </div>
@@ -730,6 +730,7 @@ td, th {
     }
     .First-Section{
         border: none;
+        
     }
     .First-Button{
         display: flex;
@@ -739,6 +740,34 @@ td, th {
     .Transport_Box h3{
         font-size: 24px;
     }
-}
+    .Second-Section h2{
+        font-size: 22px;
+        margin-top: 20px;
+    }
+    .Step-2-Button{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .btn-primary{
+        margin: 0;
+        padding: 25px;
+    }
+    .Step-3-Button{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .Step-4-Button{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .Table{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
+}
 </style>
