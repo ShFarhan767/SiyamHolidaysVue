@@ -40,9 +40,9 @@
                             <RouterLink  class="nav-link" to="/activites" role="button">Sightseeing</RouterLink>
                         </li>
                         <li class="nav-item">
-                            <RouterLink  class="nav-link" to="/" role="button">Visa</RouterLink>
+                            <RouterLink  class="nav-link" to="/visa" role="button">Visa</RouterLink>
                         </li>
-                    </ul><a class="btn btn-outline-primary rounded-pill btn-sm border-2 d-block d-lg-inline-block ms-auto my-3 my-lg-0" href="https://themewagon.com/themes/elixir/" target="_blank">Purchase</a>
+                    </ul><a class="btn btn-outline-primary rounded-pill btn-sm border-2 d-block d-lg-inline-block ms-auto my-3 my-lg-0" href="#" target="_blank">Purchase</a>
                 </div>
             </nav>
       </div>

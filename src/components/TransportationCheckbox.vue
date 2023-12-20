@@ -4,6 +4,7 @@ import { ref, onMounted , computed } from 'vue';
 const tabs = ref(null);
 const allContent = ref(null);
 const line = ref(null);
+let activeTabIndex = ref(0);
 
 onMounted(() => {
   initTabs();
@@ -21,21 +22,45 @@ const initTabs = () => {
 
       tab.classList.add('active');
 
-      const tabIndex = Array.from(tabs.value).indexOf(tab);
-      allContent.value[tabIndex].classList.add('active');
-
-      // Update line position to connect with the middle of the clicked button
-      const buttonMiddle = e.target.offsetLeft + e.target.offsetWidth / 2;
-      line.value.style.width = e.target.offsetWidth + 'px';
-      line.value.style.left = buttonMiddle - line.value.offsetWidth / 2 + 'px';
-      line.value.style.top = e.target.offsetTop + e.target.offsetHeight + 'px';
+      activeTabIndex.value = Array.from(tabs.value).indexOf(tab);
+      allContent.value[activeTabIndex.value].classList.add('active');
     });
   });
 };
 
-import InputText from 'primevue/inputtext';
+const nextTab = () => {
+  activeTabIndex.value = (activeTabIndex.value + 1) % tabs.value.length;
+  updateTabs();
+};
 
-const value = ref(null); 
+const prevTab = () => {
+  activeTabIndex.value =
+    (activeTabIndex.value - 1 + tabs.value.length) % tabs.value.length;
+  updateTabs();
+};
+
+const updateTabs = () => {
+  tabs.value.forEach((t) => t.classList.remove('active'));
+  allContent.value.forEach((content) => content.classList.remove('active'));
+
+  tabs.value[activeTabIndex.value].classList.add('active');
+  allContent.value[activeTabIndex.value].classList.add('active');
+};
+
+
+import InputText from 'primevue/inputtext';
+import Textarea from 'primevue/textarea';
+
+const value1 = ref(null); 
+const value2 = ref(null); 
+const value3 = ref(null); 
+const value4 = ref(null); 
+const value5 = ref(null); 
+const value6 = ref(null); 
+const value7 = ref(null); 
+
+
+
 
 import Calendar from 'primevue/calendar';
 const checkInDate = ref(null);
@@ -62,6 +87,25 @@ const childrenItems = ref(Array.from({ length: 10 }, (_, i) => ({ label: `${i + 
 
 const arrivalItemSelect = ref();
 const arrivalItems = ref(Array.from({ length: 10 }, (_, i) => ({ label: `${i + 1} `, value: i + 1 })));
+
+const selectedTitle = ref();
+const titles = ref([
+    { name: 'Md.', code: 'NY' },
+    { name: 'Mr.', code: 'RM' },
+    { name: 'Mrs.', code: 'LDN' },
+    { name: 'Miss'},
+]);
+
+const selectedNationality = ref();
+const nationalities = ref([
+    { name: 'Bangladeshi'},
+    { name: 'Austrilan'},
+    { name: 'Indian' },
+    { name: 'Pakistani'},
+    { name: 'American'},
+    { name: 'Canadian'},
+    { name: 'Thai'},
+]);
 
 </script>
 
@@ -110,7 +154,7 @@ const arrivalItems = ref(Array.from({ length: 10 }, (_, i) => ({ label: `${i + 1
 
                                     <span class="p-input-icon-left">
                                         <i class="pi pi-search" />
-                                        <InputText v-model="value" placeholder="Place" />
+                                        <InputText v-model="value2" placeholder="Place" />
                                     </span>
 
                                 </div>
@@ -142,8 +186,8 @@ const arrivalItems = ref(Array.from({ length: 10 }, (_, i) => ({ label: `${i + 1
                                 </div>
 
                                 <div class="row">
-                                    <div class="col-md-12">
-                                        <button type="submit" class="btn btn-primary tm-btn-search">Next</button>
+                                    <div class="col-md-12 First-Button">
+                                        <button type="submit" class="btn btn-primary tm-btn-search" @click="nextTab">Next</button>
                                     </div>
                                 </div>
                             </div>
@@ -178,7 +222,10 @@ const arrivalItems = ref(Array.from({ length: 10 }, (_, i) => ({ label: `${i + 1
                                     </tr>
                                     <tr>
                                         <td>Num of person :</td>
-                                        <td></td>
+                                        <td>
+                                            Adult (<span class="no_of_adult">1</span>), 
+                                            Child (<span class="no_of_child">0</span>) 
+                                        </td>
                                     </tr>
                                 </table>
 
@@ -207,7 +254,7 @@ const arrivalItems = ref(Array.from({ length: 10 }, (_, i) => ({ label: `${i + 1
                                                 <td>
 
                                                     <div class="card flex justify-content-center">
-                                                        <InputText type="text" v-model="value" />
+                                                        <InputText type="text" v-model="value3" />
                                                     </div>
 
                                                 </td>
@@ -223,7 +270,278 @@ const arrivalItems = ref(Array.from({ length: 10 }, (_, i) => ({ label: `${i + 1
 
                                 <div class="row">
                                     <div class="col-md-6">
-                                        <button type="submit" class="btn btn-primary tm-btn-search">Previous</button>
+                                        <button type="submit" class="btn btn-primary tm-btn-search" @click="prevTab">Previous</button>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <button type="submit" class="btn btn-primary tm-btn-search" @click="nextTab">Next</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                            
+                    </div>
+                </div>
+
+                <!-- Step 2 End -->
+
+                <!-- Step 3 Start -->
+
+                <div class="content tm-bg-white ie-container-width-fix-2">
+                    <div class="container ie-h-align-center-fix">
+                        <div class="row">
+                            
+                            <div class="col-md-4 First-Section">
+
+                                <table>
+                                    <tr>
+                                        <td>Departure From:</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Going to:</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Departure Date:</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Num of person :</td>
+                                        <td>
+                                            Adult (<span class="no_of_adult">1</span>), 
+                                            Child (<span class="no_of_child">0</span>) 
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Pick/Drop Time</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Car / Bus</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Available Seat</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Flight Number</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Departure/Arrival Time</td>
+                                        <td></td>
+                                    </tr>
+                                </table>
+
+                            </div>
+
+                            <div class="col-md-8 Second-Section">
+
+                                <div class="row">
+
+                                    <div class="col-md-12">
+
+                                        <h2>Leading Passenger</h2>
+
+                                        <div class="row">
+                                            <div class="col-md-2">
+                                                <p>Title</p>
+
+                                                <Dropdown v-model="selectedTitle" :options="titles" optionLabel="name" placeholder="Mr." class="w-full md:w-14rem" />
+
+                                            </div>
+
+                                            <div class="col-md-3">
+                                                <p>First Name</p>
+                                                
+                                                <div class="card flex justify-content-center">
+                                                    <InputText type="text" v-model="value4" />
+                                                </div>
+
+                                            </div>
+
+                                            <div class="col-md-3">
+                                                <p>Last Name</p>
+
+                                                <div class="card flex justify-content-center">
+                                                    <InputText type="text" v-model="value5" />
+                                                </div>
+
+                                            </div>
+
+                                            <div class="col-md-4">
+                                                <p>Mobile No</p>
+
+                                                <div class="card flex justify-content-center">
+                                                    <InputText type="text" v-model="value5" />
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="row">
+
+                                    <div class="col-md-6">
+                                        <p>Nationality</p>
+                                        <Dropdown v-model="selectedNationality" :options="nationalities" optionLabel="name" placeholder="Select" class="w-full md:w-14rem" />
+
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <p>Email</p>
+                                        
+                                        <div class="card flex justify-content-center">
+                                            <InputText type="text" v-model="value6" />
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <p>Add Special Request</p>
+
+                                        <div class="card flex justify-content-center">
+                                            <Textarea v-model="value7" rows="5" cols="30" placeholder="Write any request here.." />
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <button type="submit" class="btn btn-primary tm-btn-search" @click="prevTab"> Previous</button>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <button type="submit" class="btn btn-primary tm-btn-search" @click="nextTab"> Next</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                            
+                    </div>
+                </div>
+
+                <!-- Step 3 End -->
+
+                <!-- Step 4 Start -->
+
+                <div class="content tm-bg-white ie-container-width-fix-2">
+                    <div class="container ie-h-align-center-fix">
+                        <div class="row">
+                            
+                            <div class="col-md-4 First-Section">
+
+                                <table>
+                                    <tr>
+                                        <td>Departure From:</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Going to:</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Departure Date:</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Num of person :</td>
+                                        <td>
+                                            Adult (<span class="no_of_adult">1</span>), 
+                                            Child (<span class="no_of_child">0</span>) 
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Pick/Drop Time</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Car / Bus</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Available Seat</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Flight Number</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Departure/Arrival Time</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Passenger Name</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Nationality</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Email</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Mobile No</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Special Request</td>
+                                        <td></td>
+                                    </tr>
+                                </table>
+
+                            </div>
+
+                            <div class="col-md-8 Second-Section">
+
+                                <div class="row">
+
+                                    <h2>Price Details</h2>
+                                    <div class="col-md-12">
+
+                                        <table class="table">
+                                            <tbody class="table">
+                                                <tr>
+                                                    <td>Texi / Private Car 3 seat.</td>
+                                                    <td class="text-right">THB 600</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Tax</td>
+                                                    <td class="text-right">Included</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Discount/Coupon</td>
+                                                    <td class="text-right">-558</td>
+                                                </tr>
+                                                <tr class="table-footer">
+                                                    <td>Total</td>
+                                                    <td class="text-right">550</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <button type="submit" class="btn btn-primary tm-btn-search" @click="prevTab">Previous</button>
                                     </div>
 
                                     <div class="col-md-6">
@@ -237,7 +555,7 @@ const arrivalItems = ref(Array.from({ length: 10 }, (_, i) => ({ label: `${i + 1
                     </div>
                 </div>
 
-                <!-- Step 2 End -->
+                <!-- Step 4 End -->
 
             </div>
 
@@ -261,16 +579,18 @@ const arrivalItems = ref(Array.from({ length: 10 }, (_, i) => ({ label: `${i + 1
     padding-bottom: 10px;
     letter-spacing: 0.5px;
 }
-.Tab-Section{
-    background: #fff;
-    padding-bottom: 25px;
-}
-.Button{
-    height: auto;
-    float: left;
+.Tab-Section {
     display: flex;
-    align-items: center;
+    flex-wrap: wrap;
     justify-content: center;
+    background: #fff;
+    padding: 25px;
+}
+
+.Button {
+    flex: 1 1 100%; /* Equal width for each button, full width on smaller screens */
+    max-width: 220px; /* Maximum width for each button, adjust as needed */
+    background: #fff;
 }
 .tab_btn{
     font-size: 20px;
@@ -321,7 +641,7 @@ button:focus {
 .Second-Section{
     background: #fff;
     height: auto;
-    padding-bottom: 20px;
+    padding-bottom: 0px;
 }
 .Date-Section{
     padding-bottom: 25px;
@@ -380,10 +700,45 @@ input {
     border: 1px solid #fd9604;
     color: #fd9604;
 }
+tr .table{
+    width: 100%;
+}
 td, th {
-    width: auto;
     border: 1px solid #dddddd;
     text-align: left;
-    padding: 12px;
+    padding: 15px;
 }
+.text-right{
+    text-align: right;
+}
+.table-footer{
+    background: #ddd;
+    height: 65px;
+}
+.Second-Section h2{
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 26px;
+    letter-spacing: 1px;
+}
+@media screen and (max-width: 768px) {
+    .Button {
+        flex: 1 1 25%; /* 4 columns on larger screens */
+        max-width: none; /* Reset max-width on larger screens */
+    }
+    .tab_btn{
+        font-size: 14px;
+    }
+    .First-Section{
+        border: none;
+    }
+    .First-Button{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .Transport_Box h3{
+        font-size: 24px;
+    }
+}
+
 </style>

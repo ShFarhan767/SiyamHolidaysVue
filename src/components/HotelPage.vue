@@ -32,7 +32,7 @@ const roomItems = ref(Array.from({ length: 10 }, (_, i) => ({ label: `${i + 1} R
 const cardItems = [
   {
     rating: 4.8,
-    image: '../../assets/img/Travel/Hotel/Card-1.jpeg',
+    image: '/assets/Card-1.jpeg',
     title: 'Aksari Resort',
     description: 'I show you how to make a card group easily and very functional with the use of flexbox and its magic and JavaScript.',
     link: '#'
