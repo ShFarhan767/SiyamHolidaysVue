@@ -136,7 +136,7 @@
 .offer-box2{
     border: 1px solid #fd9604;
     border-radius: 10px;
-     background: linear-gradient( to left, #35b91a,rgb(30, 104, 216));
+    background: linear-gradient( to left, #35b91a,rgb(30, 104, 216));
 }
 .offer-box2 img{
     width: 100px;
@@ -169,5 +169,13 @@
     border-radius: 50%;
     padding: 10px 12px;
     background: #fd9604;
+}
+@media screen and (max-width: 768px) {
+    .offer-box1{
+        margin-top: 20px;
+    }
+    .offer-box2{
+        margin-top: 20px;
+    }
 }
 </style>

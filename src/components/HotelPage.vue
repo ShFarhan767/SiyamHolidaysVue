@@ -4,42 +4,42 @@ import HotelCheckBox from './HotelCheckBox.vue';
 const cardItems = [
   {
     rating: 4.8,
-    image: 'https://images.pexels.com/photos/258154/pexels-pho…jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    image: 'https://images.pexels.com/photos/258154/pexels-photo-258154.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
     title: 'Aksari Resort',
     description: 'I show you how to make a card group easily and very functional with the use of flexbox and its magic and JavaScript.',
     link: '#'
   },
   {
     rating: 4.9,
-    image: '../../assets/img/Travel/Hotel/Card-2.jpeg',
+    image: 'https://images.pexels.com/photos/70441/pexels-photo-70441.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
     title: 'Jumeirah Al Qasr',
     description: 'I show you how to make a card group easily and very functional with the use of flexbox and its magic and JavaScript.',
     link: '#'
   },
   {
     rating: 4.6,
-    image: '../../assets/img/Travel/Hotel/Card-3.jpeg',
+    image: 'https://images.pexels.com/photos/261101/pexels-photo-261101.jpeg',
     title: 'Hotel Casa Turquesa',
     description: 'I show you how to make a card group easily and very functional with the use of flexbox and its magic and JavaScript.',
     link: '#'
   },
   {
     rating: 4.5,
-    image: '../../assets/img/Travel/Hotel/Card-4.jpeg',
+    image: 'https://images.pexels.com/photos/189296/pexels-photo-189296.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
     title: 'Soneva Fushi',
     description: 'I show you how to make a card group easily and very functional with the use of flexbox and its magic and JavaScript.',
     link: '#'
   },
   {
     rating: 4.5,
-    image: '../../assets/img/Travel/Hotel/Card-5.jpeg',
+    image: 'https://images.pexels.com/photos/2869215/pexels-photo-2869215.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
     title: 'La Réserve Paris',
     description: 'I show you how to make a card group easily and very functional with the use of flexbox and its magic and JavaScript.',
     link: '#'
   },
   {
     rating: 4.5,
-    image: '../../assets/img/Travel/Hotel/Card-6.jpeg',
+    image: 'https://images.pexels.com/photos/751268/pexels-photo-751268.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
     title: 'Marina Bay Sands',
     description: 'I show you how to make a card group easily and very functional with the use of flexbox and its magic and JavaScript.',
     link: '#'
@@ -226,6 +226,7 @@ const cardItems = [
         padding-bottom: 115px;
     }
     .card{
+        margin: 20px;
         display: flex;
         justify-content: center;
         align-items: center;

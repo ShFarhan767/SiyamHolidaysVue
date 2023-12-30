@@ -123,66 +123,106 @@
 </template>
 
 <style scoped>
- .footer_area{
+.footer_area {
     width: 100%;
-    padding: 10px;
-    height: auto;
+    padding: 20px;
     background: black;
     overflow: hidden;
- }
- .footer-ul{
+}
+
+.footer-ul {
     margin-top: 20px;
     color: white;
     list-style: none;
- }
-.footer_area ul li a{
+    padding: 0;
+}
+
+.footer_area ul li a {
     font-size: 14px;
     line-height: 25px;
     text-decoration: none;
     color: white;
- }
- svg:not(:root).svg-inline--fa {
+}
+
+svg:not(:root).svg-inline--fa {
     overflow: visible;
     color: #fd9604;
     font-size: 18px;
     margin: 0px 5px;
 }
- .heading7{
+
+.heading7 {
     color: #fd9604;
     margin-left: 30px;
     font-size: 20px;
     font-weight: 700;
- }
- .contact{
+}
+
+.contact {
     color: white;
     font-size: 20px;
     font-weight: 600;
     letter-spacing: 0.2px;
- }
- .number{
+}
+
+.number {
     color: white;
     font-size: 16px;
- }
- hr:not([size]) {
+}
+
+hr:not([size]) {
     height: 2px;
 }
- hr{
+
+hr {
     background-color: #8cd02c;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 10px auto;
 }
-.secend-area{
+
+.secend-area {
     border-radius: 10px;
 }
-.secend-box{
+
+.secend-box {
     border-radius: 10px;
-    border:1px solid #fd9604;
+    border: 1px solid #fd9604;
+    padding: 10px;
+    margin-top: 20px;
 }
-.secend-box h4{
-    margin-left: 10px;
+
+.secend-box h4 {
+    margin-left: 0;
+    font-size: 16px;
 }
-.secend-box p{
+
+.secend-box p {
     font-size: 14px;
-    margin-left: 10px;
+    margin-left: 0;
 }
+
+@media screen and (max-width: 768px) {
+    .footer_area {
+        padding: 15px;
+    }
+
+    .footer_area ul li a,
+    .heading7,
+    .contact,
+    .number {
+        font-size: 16px;
+    }
+
+    svg:not(:root).svg-inline--fa {
+        font-size: 16px;
+    }
+
+    .secend-box h4 {
+        font-size: 14px;
+    }
+
+    .secend-box p {
+        font-size: 12px;
+    }
+}
+
 </style>
