@@ -350,4 +350,14 @@
     border-bottom-left-radius: 25px;
     border-bottom-right-radius: 25px;
 }
+@media screen and (max-width: 768px) {
+    .slider{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .card-content{
+        display: grid;
+    }
+}
 </style>

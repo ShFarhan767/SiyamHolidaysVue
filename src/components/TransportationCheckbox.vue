@@ -1,10 +1,11 @@
 <script setup>
 import { ref, onMounted , computed } from 'vue';
 
-const tabs = ref(null);
-const allContent = ref(null);
+const tabs = ref([]);
+const allContent = ref([]);
 const line = ref(null);
-let activeTabIndex = ref(0);
+const activeTabIndex = ref(0);
+const isNextButtonEnabled = ref(false);
 
 onMounted(() => {
   initTabs();
@@ -16,27 +17,30 @@ const initTabs = () => {
   line.value = document.querySelector('.line');
 
   tabs.value.forEach((tab, index) => {
-    tab.addEventListener('click', (e) => {
-      tabs.value.forEach((t) => t.classList.remove('active'));
-      allContent.value.forEach((content) => content.classList.remove('active'));
-
-      tab.classList.add('active');
-
-      activeTabIndex.value = Array.from(tabs.value).indexOf(tab);
-      allContent.value[activeTabIndex.value].classList.add('active');
-    });
+    tab.addEventListener('click', () => handleTabClick(index));
   });
 };
 
+const handleTabClick = (index) => {
+  if (isNextButtonEnabled.value) {
+    activeTabIndex.value = index;
+    updateTabs();
+  }
+};
+
 const nextTab = () => {
-  activeTabIndex.value = (activeTabIndex.value + 1) % tabs.value.length;
-  updateTabs();
+  if (activeTabIndex.value < tabs.value.length - 1) {
+    activeTabIndex.value++;
+    updateTabs();
+    isNextButtonEnabled.value = false; // Disable tabs after moving to the next tab
+  }
 };
 
 const prevTab = () => {
-  activeTabIndex.value =
-    (activeTabIndex.value - 1 + tabs.value.length) % tabs.value.length;
-  updateTabs();
+  if (activeTabIndex.value > 0) {
+    activeTabIndex.value--;
+    updateTabs();
+  }
 };
 
 const updateTabs = () => {
@@ -48,16 +52,18 @@ const updateTabs = () => {
 };
 
 
+
 import InputText from 'primevue/inputtext';
 import Textarea from 'primevue/textarea';
 
-const value1 = ref(null); 
-const value2 = ref(null); 
-const value3 = ref(null); 
-const value4 = ref(null); 
-const value5 = ref(null); 
-const value6 = ref(null); 
-const value7 = ref(null); 
+const value1 = ref(null);
+const value2 = ref(null);
+const value3 = ref(null);
+const value4 = ref(null);
+const value5 = ref(null);
+const value6 = ref(null);
+const value7 = ref(null);
+const value8 = ref(null);
 
 
 
@@ -376,7 +382,7 @@ const nationalities = ref([
                                                 <p>Mobile No</p>
 
                                                 <div class="card flex justify-content-center">
-                                                    <InputText type="text" v-model="value5" />
+                                                    <InputText type="text" v-model="value8" />
                                                 </div>
 
                                             </div>
@@ -730,7 +736,15 @@ td, th {
     }
     .First-Section{
         border: none;
-        
+    }
+    .table{
+        margin-left: -10px;
+    }
+    td{
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 12px;
+        font-size: 14px;
     }
     .First-Button{
         display: flex;

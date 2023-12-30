@@ -80,7 +80,7 @@ import FlightCard from './FlightCard.vue';
     .Flight_Background img {
         width: 100%;
         height: 310px;
-        top: 0;
+        top: 60px;
         right: 0;
     }
 }

@@ -64,12 +64,10 @@ import TransportationCardVue from './TransportationCard.vue';
     font-size: 18px;
 }
 @media screen and (max-width: 768px) {
-    .Transportation{
-        margin-top: 60px;
-    }
     .Transportation_Heading{
         height: auto;
-        padding-bottom: 90px;
+        padding-bottom: 110px;
+        margin-top: 10px !important;
     }
     .Heading_Text h2 {
         font-size: 35px;
@@ -82,7 +80,7 @@ import TransportationCardVue from './TransportationCard.vue';
     .Transportation_Background img {
         width: 100%;
         height: auto;
-        top: 0;
+        top: 60px;
         right: 0;
     }
 }

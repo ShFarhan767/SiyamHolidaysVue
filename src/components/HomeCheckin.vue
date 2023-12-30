@@ -561,6 +561,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     .tab_btn{
         width: 40px;
         height: 40px;
+        margin-top: -10px !important;
         font-size: 15px;
         padding: 0px;
     }
@@ -568,8 +569,8 @@ input[type="date"]::-webkit-calendar-picker-indicator {
         font-size: 12px;
     }
     .tab_box{
-        margin-left: -30px !important;
-        width: 320px;
+        margin-left: -10% !important;
+        width: 120%;
     }
     .line{
         width: 55px !important;
