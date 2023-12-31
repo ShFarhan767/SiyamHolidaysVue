@@ -63,7 +63,7 @@ const travelPackages = [
 
                 <h1>Featured Package</h1>
 
-                <div v-for="(Package, index) in travelPackages" :key="index" class="col-md-4">
+                <div v-for="(Package, index) in travelPackages" :key="index" class="col-md-4 Cards">
 
                     <div class="card">
                         <div class="Package-card-img">
@@ -246,6 +246,11 @@ p {
     }
     .card{
         margin: 10px;
+    }
+    .Cards{
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 }
 </style>

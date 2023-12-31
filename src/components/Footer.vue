@@ -211,6 +211,10 @@ hr {
     .number {
         font-size: 16px;
     }
+    .heading7{
+        font-size: 20px;
+        margin-left: 0px;
+    }
 
     svg:not(:root).svg-inline--fa {
         font-size: 16px;

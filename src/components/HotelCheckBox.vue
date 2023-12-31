@@ -200,5 +200,22 @@ input{
     border: 1px solid #fd9604;
     color: #fff !important; 
 }
-
+@media screen and (max-width: 768px) {
+    .Hotel_Box h3 , .First-Section h4 , .Second-Section h4{
+        font-size: 18px !important;
+    }
+    .First-Section p{
+        margin-top: 15px;
+    }
+    .p-dropdown {
+        margin-top: 15px;
+    }
+    .Hotel_Card h1{
+        font-size: 38px;
+    }
+    .btn-primary{
+        margin-left: 10%;
+    }
+    
+}
 </style>

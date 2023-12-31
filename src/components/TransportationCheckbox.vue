@@ -56,8 +56,9 @@ const updateTabs = () => {
 import InputText from 'primevue/inputtext';
 import Textarea from 'primevue/textarea';
 
-const value1 = ref(null);
-const value2 = ref(null);
+const departureFrom = ref('');
+const goingTo = ref('');
+const departureDate = ref(null);
 const value3 = ref(null);
 const value4 = ref(null);
 const value5 = ref(null);
@@ -69,7 +70,6 @@ const value8 = ref(null);
 
 
 import Calendar from 'primevue/calendar';
-const checkInDate = ref(null);
 const checkOutDate = ref(null);
 
 const currentDatePlaceholder = computed(() => {
@@ -102,7 +102,7 @@ const titles = ref([
     { name: 'Miss'},
 ]);
 
-const selectedNationality = ref();
+const selectedNationality = ref('');
 const nationalities = ref([
     { name: 'Bangladeshi'},
     { name: 'Austrilan'},
@@ -151,7 +151,7 @@ const nationalities = ref([
 
                                 <span class="p-input-icon-left">
                                     <i class="pi pi-search" />
-                                    <InputText v-model="value1" placeholder="Place" />
+                                    <InputText v-model="departureFrom" placeholder="Place" />
                                 </span>
 
                                 <div class="col-md-12 ">
@@ -160,7 +160,7 @@ const nationalities = ref([
 
                                     <span class="p-input-icon-left">
                                         <i class="pi pi-search" />
-                                        <InputText v-model="value2" placeholder="Place" />
+                                        <InputText v-model="goingTo" placeholder="Place" />
                                     </span>
 
                                 </div>
@@ -169,7 +169,7 @@ const nationalities = ref([
 
                                     <div class="col-md-12">
                                         <p>Tour Date</p>
-                                        <Calendar v-model="checkInDate" showIcon iconDisplay="input" inputId="checkOutDateInput" :placeholder="currentDatePlaceholder" />
+                                        <Calendar v-model="departureDate" showIcon iconDisplay="input" inputId="checkOutDateInput" :placeholder="currentDatePlaceholder" />
                                     </div>
 
                                 </div>
@@ -216,21 +216,21 @@ const nationalities = ref([
                                 <table>
                                     <tr>
                                         <td>Departure From:</td>
-                                        <td></td>
+                                        <td>{{ departureFrom }}</td>
                                     </tr>
                                     <tr>
                                         <td>Going to:</td>
-                                        <td></td>
+                                        <td>{{ goingTo }}</td>
                                     </tr>
                                     <tr>
                                         <td>Departure Date:</td>
-                                        <td></td>
+                                        <td>{{ departureDate }}</td>
                                     </tr>
                                     <tr>
                                         <td>Num of person :</td>
                                         <td>
-                                            Adult (<span class="no_of_adult">1</span>), 
-                                            Child (<span class="no_of_child">0</span>) 
+                                            Adult (<span class="no_of_adult">{{ adultsItemHotel }}</span>), 
+                                            Child (<span class="no_of_child">{{ childrenItemHotel }}</span>) 
                                         </td>
                                     </tr>
                                 </table>
@@ -243,32 +243,34 @@ const nationalities = ref([
 
                                     <div class="col-md-12">
 
-                                        <table>
-                                            <tr>
-                                                <td>Pick/Drop Time</td>
-                                                <td>Car/Bus</td>
-                                                <td>Available Seat</td>
-                                                <td>Flight Number</td>
-                                                <td>Departure/Arrival Time</td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <Dropdown v-model="selectedItemTime" :options="items" optionLabel="label" optionValue="value" :virtualScrollerOptions="{ itemSize: 38 }" placeholder="Select" class="w-full md:w-14rem" />
-                                                </td>
-                                                <td></td>
-                                                <td></td>
-                                                <td>
+                                        <div class="table-responsive">
 
-                                                    <div class="card flex justify-content-center">
+                                            <table class="table">
+                                                <tr>
+                                                    <td>Pick/Drop Time</td>
+                                                    <td>Car/Bus</td>
+                                                    <td>Available Seat</td>
+                                                    <td>Flight Number</td>
+                                                    <td>Departure/Arrival Time</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <Dropdown v-model="selectedItemTime" :options="items" optionLabel="label" optionValue="value" :virtualScrollerOptions="{ itemSize: 38 }" placeholder="Select" class="w-full md:w-14rem" />
+                                                    </td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td>
+
                                                         <InputText type="text" v-model="value3" />
-                                                    </div>
 
-                                                </td>
-                                                <td>
-                                                    <Dropdown v-model="arrivalItemSelect" :options="arrivalItems" optionLabel="label" optionValue="value" :virtualScrollerOptions="{ itemSize: 38 }" placeholder="Select" class="w-full md:w-14rem" />
-                                                </td>
-                                            </tr>
-                                        </table>
+                                                    </td>
+                                                    <td>
+                                                        <Dropdown v-model="arrivalItemSelect" :options="arrivalItems" optionLabel="label" optionValue="value" :virtualScrollerOptions="{ itemSize: 38 }" placeholder="Select" class="w-full md:w-14rem" />
+                                                    </td>
+                                                </tr>
+                                            </table>
+
+                                        </div>
 
                                     </div>
 
@@ -303,26 +305,26 @@ const nationalities = ref([
                                 <table>
                                     <tr>
                                         <td>Departure From:</td>
-                                        <td></td>
+                                        <td>{{ departureFrom }}</td>
                                     </tr>
                                     <tr>
                                         <td>Going to:</td>
-                                        <td></td>
+                                        <td>{{ goingTo }}</td>
                                     </tr>
                                     <tr>
                                         <td>Departure Date:</td>
-                                        <td></td>
+                                        <td>{{ departureDate }}</td>
                                     </tr>
                                     <tr>
                                         <td>Num of person :</td>
                                         <td>
-                                            Adult (<span class="no_of_adult">1</span>), 
-                                            Child (<span class="no_of_child">0</span>) 
+                                            Adult (<span class="no_of_adult">{{ adultsItemHotel }}</span>), 
+                                            Child (<span class="no_of_child">{{ childrenItemHotel }}</span>) 
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>Pick/Drop Time</td>
-                                        <td></td>
+                                        <td>{{ selectedItemTime }}</td>
                                     </tr>
                                     <tr>
                                         <td>Car / Bus</td>
@@ -334,11 +336,11 @@ const nationalities = ref([
                                     </tr>
                                     <tr>
                                         <td>Flight Number</td>
-                                        <td></td>
+                                        <td>{{ value3 }}</td>
                                     </tr>
                                     <tr>
                                         <td>Departure/Arrival Time</td>
-                                        <td></td>
+                                        <td>{{ arrivalItemSelect }}</td>
                                     </tr>
                                 </table>
 
@@ -452,26 +454,26 @@ const nationalities = ref([
                                 <table>
                                     <tr>
                                         <td>Departure From:</td>
-                                        <td></td>
+                                        <td>{{ departureFrom }}</td>
                                     </tr>
                                     <tr>
                                         <td>Going to:</td>
-                                        <td></td>
+                                        <td>{{ goingTo }}</td>
                                     </tr>
                                     <tr>
                                         <td>Departure Date:</td>
-                                        <td></td>
+                                        <td>{{ departureDate }}</td>
                                     </tr>
                                     <tr>
                                         <td>Num of person :</td>
                                         <td>
-                                            Adult (<span class="no_of_adult">1</span>), 
-                                            Child (<span class="no_of_child">0</span>) 
+                                            Adult (<span class="no_of_adult">{{ adultsItemHotel }}</span>), 
+                                            Child (<span class="no_of_child">{{ childrenItemHotel }}</span>) 
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>Pick/Drop Time</td>
-                                        <td></td>
+                                        <td>{{ selectedItemTime }}</td>
                                     </tr>
                                     <tr>
                                         <td>Car / Bus</td>
@@ -483,27 +485,27 @@ const nationalities = ref([
                                     </tr>
                                     <tr>
                                         <td>Flight Number</td>
-                                        <td></td>
+                                        <td>{{ value3 }}</td>
                                     </tr>
                                     <tr>
                                         <td>Departure/Arrival Time</td>
-                                        <td></td>
+                                        <td>{{ arrivalItemSelect }}</td>
                                     </tr>
                                     <tr>
                                         <td>Passenger Name</td>
-                                        <td></td>
+                                        <td>{{ value4 }} {{ value5 }}</td>
                                     </tr>
                                     <tr>
                                         <td>Nationality</td>
-                                        <td></td>
+                                        <td>{{ selectedNationality }}</td>
                                     </tr>
                                     <tr>
                                         <td>Email</td>
-                                        <td></td>
+                                        <td>{{ value6 }}</td>
                                     </tr>
                                     <tr>
                                         <td>Mobile No</td>
-                                        <td></td>
+                                        <td>{{ value8 }}</td>
                                     </tr>
                                     <tr>
                                         <td>Special Request</td>

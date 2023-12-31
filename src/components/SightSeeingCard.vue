@@ -57,7 +57,7 @@ const destinations = [
 
                 <h1>Featured Attraction</h1>
 
-                <div v-for="(destination , index ) in destinations" :key="index" class="col-md-4">
+                <div v-for="(destination , index ) in destinations" :key="index" class="col-md-4 Cards">
 
                     <div class="card">
                         <img :src="destination.image" alt="destination" />
@@ -95,7 +95,7 @@ const destinations = [
   min-width: 320px;
   height:auto;
   background-color: #fff;
-  box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.7);
+  box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.3);
   position:relative;
   z-index:10;
   margin:25px;
@@ -201,6 +201,11 @@ svg:not(:root).svg-inline--fa {
   }
   .card{
     margin: 10px;
+  }
+  .Cards{
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
 </style>

@@ -52,7 +52,7 @@ const packages = [
 
             <h1>Featured Transportation</h1>
 
-            <div v-for="(Package , index) in packages" :key="index" class="col-md-4">
+            <div v-for="(Package , index) in packages" :key="index" class="col-md-4 Cards">
                 <div class="card">
                     <div class="Package-card-img">
                         <img :src="Package.image" alt="">
@@ -181,8 +181,10 @@ p {
   .Transport_Card h1{
     font-size: 28px;
   }
-  /* .card{
-    margin: 10px;
-  } */
+  .Cards{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
 </style>

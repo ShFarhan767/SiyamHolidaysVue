@@ -67,7 +67,7 @@ import SightSeeingCard from './SightSeeingCard.vue';
 @media screen and (max-width: 768px) {
     .SightSeeing_Heading{
         height: auto;
-        padding-bottom: 55px;
+        padding-bottom: 100px;
     }
     .Heading_Text h2 {
         font-size: 35px;
@@ -79,7 +79,7 @@ import SightSeeingCard from './SightSeeingCard.vue';
 
     .SightSeeing_Background img {
         width: 100%;
-        height: auto;
+        height: 295px;
         top: 0;
         right: 0;
     }
