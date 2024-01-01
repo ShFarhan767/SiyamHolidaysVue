@@ -141,7 +141,7 @@
     font-size: 14px;
     line-height: 25px;
     text-decoration: none;
-    color: white;
+    color: white; 
 }
 
 svg:not(:root).svg-inline--fa {
@@ -153,7 +153,6 @@ svg:not(:root).svg-inline--fa {
 
 .heading7 {
     color: #fd9604;
-    margin-left: 30px;
     font-size: 20px;
     font-weight: 700;
 }

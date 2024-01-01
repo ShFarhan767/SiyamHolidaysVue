@@ -102,7 +102,7 @@ const titles = ref([
     { name: 'Miss'},
 ]);
 
-const selectedNationality = ref('');
+const selectedNationality = ref();
 const nationalities = ref([
     { name: 'Bangladeshi'},
     { name: 'Austrilan'},
@@ -449,73 +449,77 @@ const nationalities = ref([
                     <div class="container ie-h-align-center-fix">
                         <div class="row">
                             
-                            <div class="col-md-4 First-Section Table">
+                            <div class="col-md-5 First-Section Table">
 
-                                <table>
-                                    <tr>
-                                        <td>Departure From:</td>
-                                        <td>{{ departureFrom }}</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Going to:</td>
-                                        <td>{{ goingTo }}</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Departure Date:</td>
-                                        <td>{{ departureDate }}</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Num of person :</td>
-                                        <td>
-                                            Adult (<span class="no_of_adult">{{ adultsItemHotel }}</span>), 
-                                            Child (<span class="no_of_child">{{ childrenItemHotel }}</span>) 
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Pick/Drop Time</td>
-                                        <td>{{ selectedItemTime }}</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Car / Bus</td>
-                                        <td></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Available Seat</td>
-                                        <td></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Flight Number</td>
-                                        <td>{{ value3 }}</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Departure/Arrival Time</td>
-                                        <td>{{ arrivalItemSelect }}</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Passenger Name</td>
-                                        <td>{{ value4 }} {{ value5 }}</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Nationality</td>
-                                        <td>{{ selectedNationality }}</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Email</td>
-                                        <td>{{ value6 }}</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Mobile No</td>
-                                        <td>{{ value8 }}</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Special Request</td>
-                                        <td></td>
-                                    </tr>
-                                </table>
+                                <div class="table">
+
+                                    <table class="table">
+                                        <tr>
+                                            <td>Departure From:</td>
+                                            <td>{{ departureFrom }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Going to:</td>
+                                            <td>{{ goingTo }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Departure Date:</td>
+                                            <td>{{ departureDate }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Num of person :</td>
+                                            <td>
+                                                Adult (<span class="no_of_adult">{{ adultsItemHotel }}</span>), 
+                                                Child (<span class="no_of_child">{{ childrenItemHotel }}</span>) 
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Pick/Drop Time</td>
+                                            <td>{{ selectedItemTime }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Car / Bus</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Available Seat</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Flight Number</td>
+                                            <td>{{ value3 }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Departure/Arrival Time</td>
+                                            <td>{{ arrivalItemSelect }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Passenger Name</td>
+                                            <td>{{ value4 }} {{ value5 }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Nationality</td>
+                                            <td>{{ selectedNationality }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Email</td>
+                                            <td>{{ value6 }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Mobile No</td>
+                                            <td>{{ value8 }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Special Request</td>
+                                            <td>{{ value7 }}</td>
+                                        </tr>
+                                    </table>
+
+                                </div>
 
                             </div>
 
-                            <div class="col-md-8 Second-Section">
+                            <div class="col-md-7 Second-Section">
 
                                 <div class="row ">
 
